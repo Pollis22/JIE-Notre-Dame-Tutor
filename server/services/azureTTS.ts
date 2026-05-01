@@ -1,5 +1,5 @@
 /**
- * University of Wisconsin AI Tutor Platform
+ * Notre Dame AI Tutor Platform
  * Copyright (c) 2025 JIE Mastery AI, Inc.
  * All Rights Reserved.
  * 
