@@ -11,18 +11,18 @@ import { Eye, EyeOff, Mic, Brain, ArrowRight, GraduationCap, FlaskConical, Check
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
-import uwLogo from "@/assets/uw-madison-logo.png";
+import ndLogo from "@/assets/notre-dame-logo.png";
 
-// Campus photos — UW Madison branding
-import buckyGraduation from "@/assets/campus/bucky-graduation.png";
-import bascomHall from "@/assets/campus/bascom-hall.png";
-import buckyBasketball from "@/assets/campus/bucky-basketball.png";
-import buckyLecture from "@/assets/campus/bucky-lecture.png";
-import buckyFootball from "@/assets/campus/bucky-football.png";
-import buckyHockey from "@/assets/campus/bucky-hockey.png";
-import buckyClassroom from "@/assets/campus/bucky-classroom.png";
-import studentLibrary from "@/assets/campus/student-library.png";
-import memorialUnion from "@/assets/campus/memorial-union.png";
+// Campus photos — University of Notre Dame branding
+import ndGraduation from "@/assets/campus/nd-graduation.png";
+import goldenDome from "@/assets/campus/golden-dome.png";
+import leprechaunStatue from "@/assets/campus/leprechaun-statue.png";
+import goldenDomeCloseup from "@/assets/campus/golden-dome-closeup.png";
+import irishFans from "@/assets/campus/irish-fans.png";
+import leprechaunMascot from "@/assets/campus/leprechaun-mascot.png";
+import ndClassroom from "@/assets/campus/nd-classroom.png";
+import touchdownJesus from "@/assets/campus/touchdown-jesus.png";
+import hesburghReflection from "@/assets/campus/hesburgh-reflection.png";
 
 const loginSchema = z.object({
   email: z.string().min(1, "Email is required"),
@@ -45,69 +45,69 @@ const registerSchema = z.object({
 type LoginForm = z.infer<typeof loginSchema>;
 type RegisterForm = z.infer<typeof registerSchema>;
 
-/* ─── Photo Collage — Badger campus life ─── */
+/* ─── Photo Collage — Fighting Irish campus life ─── */
 function PhotoCollage() {
   return (
     <section className="py-12 md:py-16 px-4 md:px-12 max-w-7xl mx-auto" style={{ background: "#FFFFFF" }}>
       <div className="text-center mb-8 md:mb-12">
-        <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(24px, 4vw, 40px)", fontWeight: 800, color: "#282728", lineHeight: 1.15, marginBottom: 8 }}>
-          On Wisconsin. <span style={{ color: "#C5050C" }}>In class, on the field, everywhere you learn.</span>
+        <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(24px, 4vw, 40px)", fontWeight: 800, color: "#0C2340", lineHeight: 1.15, marginBottom: 8 }}>
+          Go Irish. <span style={{ color: "#0C2340" }}>In class, on the field, everywhere you learn.</span>
         </h2>
-        <p style={{ fontSize: 16, color: "#646569", maxWidth: 560, margin: "0 auto", lineHeight: 1.6, padding: "0 8px" }}>
-          From lecture halls to the Kohl Center — Badgers bring the energy. Your Student Relationship Manager keeps up, wherever learning happens.
+        <p style={{ fontSize: 16, color: "#C99700", maxWidth: 560, margin: "0 auto", lineHeight: 1.6, padding: "0 8px" }}>
+          From lecture halls to Notre Dame Stadium — Fighting Irish bring the energy. Your Student Relationship Manager keeps up, wherever learning happens.
         </p>
       </div>
 
-      {/* Hero tile — Bascom Hall spans full width on its own row */}
+      {/* Hero tile — the Main Building spans full width on its own row */}
       <div className="max-w-5xl mx-auto mb-3 md:mb-4">
         <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.01]"
           style={{ border: "3px solid white", boxShadow: "0 12px 40px rgba(0,0,0,0.12)", transform: "rotate(-0.5deg)" }}>
-          <img src={bascomHall} alt="Bascom Hall at the University of Wisconsin–Madison" className="w-full h-48 md:h-72 object-cover" style={{ objectPosition: "center 40%" }} />
-          <div style={{ height: 4, background: "#C5050C" }} />
+          <img src={goldenDome} alt="the Main Building at the University of Notre Dame" className="w-full h-48 md:h-72 object-cover" style={{ objectPosition: "center 40%" }} />
+          <div style={{ height: 4, background: "#0C2340" }} />
         </div>
       </div>
 
-      {/* Action-shot row — 5 tiles: lecture, basketball, football, hockey, library */}
+      {/* Action-shot row — 5 tiles: dome detail, leprechaun statue, fans, leprechaun mascot, Word of Life mural */}
       <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4">
-        {/* Bucky in lecture */}
+        {/* Golden Dome detail — close-up of the Main Building dome and statue of Mary */}
         <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.03]"
           style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)", transform: "rotate(2deg)" }}>
-          <img src={buckyLecture} alt="Bucky Badger in an Econ 101 lecture" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 35%" }} />
+          <img src={goldenDomeCloseup} alt="Close-up detail of the Golden Dome and statue of Mary atop the Main Building" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 35%" }} />
         </div>
 
-        {/* Basketball dunk */}
+        {/* Leprechaun statue with graduates */}
         <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.03]"
           style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)", transform: "rotate(-1.5deg)" }}>
-          <img src={buckyBasketball} alt="Bucky dunking at the Kohl Center" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 20%" }} />
+          <img src={leprechaunStatue} alt="Notre Dame graduates posing with the Fighting Irish leprechaun statue" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 20%" }} />
         </div>
 
-        {/* Football TD */}
+        {/* Irish fans on game day */}
         <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.03]"
           style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)", transform: "rotate(1.5deg)" }}>
-          <img src={buckyFootball} alt="Bucky scoring a touchdown at Camp Randall" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 25%" }} />
+          <img src={irishFans} alt="Notre Dame fans painted with IRISH on game day at Notre Dame Stadium" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 25%" }} />
         </div>
 
-        {/* Hockey goal — Kohl Center */}
+        {/* Fighting Irish leprechaun mascot */}
         <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.03]"
           style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)", transform: "rotate(-1.5deg)" }}>
-          <img src={buckyHockey} alt="Bucky scoring a hockey goal at the Kohl Center" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 25%" }} />
+          <img src={leprechaunMascot} alt="The Fighting Irish leprechaun mascot" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 25%" }} />
         </div>
 
-        {/* Student in library — UW Athletics gear */}
+        {/* Hesburgh Library — Word of Life mural */}
         <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.03] col-span-2 md:col-span-1"
           style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)", transform: "rotate(-2deg)" }}>
-          <img src={studentLibrary} alt="UW–Madison student studying in the library" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 30%" }} />
+          <img src={touchdownJesus} alt="The Word of Life mural (Touchdown Jesus) on the Hesburgh Library" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 30%" }} />
         </div>
       </div>
 
       {/* Floating quote */}
       <div className="max-w-4xl mx-auto mt-6 md:mt-8">
         <div className="mx-auto px-5 py-3.5 rounded-xl shadow-md inline-block"
-          style={{ background: "rgba(255,255,255,0.95)", border: "1px solid rgba(197,5,12,0.12)", transform: "rotate(-0.5deg)", borderLeft: "3px solid #C5050C" }}>
-          <p style={{ fontFamily: "'Red Hat Text', sans-serif", fontSize: 14, fontStyle: "italic", color: "#282728", lineHeight: 1.5, fontWeight: 500 }}>
+          style={{ background: "rgba(255,255,255,0.95)", border: "1px solid rgba(12, 35, 64,0.12)", transform: "rotate(-0.5deg)", borderLeft: "3px solid #0C2340" }}>
+          <p style={{ fontFamily: "'Red Hat Text', sans-serif", fontSize: 14, fontStyle: "italic", color: "#0C2340", lineHeight: 1.5, fontWeight: 500 }}>
             "It's not just a tutor — it knows my whole semester. Every deadline, every exam, every gap. Game changer."
           </p>
-          <p style={{ fontSize: 12, color: "#646569", marginTop: 4, fontWeight: 600 }}>— Junior, Biology · UW–Madison</p>
+          <p style={{ fontSize: 12, color: "#C99700", marginTop: 4, fontWeight: 600 }}>— Junior, Biology · Notre Dame</p>
         </div>
       </div>
     </section>
@@ -227,7 +227,7 @@ export default function AuthPage() {
   return (
     <div className="min-h-screen" style={{ background: "#FFFFFF", fontFamily: "'Red Hat Text', 'Source Sans 3', sans-serif" }}>
       {/* Red top bar */}
-      <div className="fixed top-0 left-0 right-0 z-[60]" style={{ height: 4, background: "#C5050C" }} />
+      <div className="fixed top-0 left-0 right-0 z-[60]" style={{ height: 4, background: "#0C2340" }} />
 
       {/* Nav */}
       <nav className="fixed top-1 left-0 right-0 z-50 transition-all duration-300"
@@ -239,10 +239,10 @@ export default function AuthPage() {
         }}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2 md:gap-4 min-w-0">
-            <img src={uwLogo} alt="University of Wisconsin–Madison" className="h-12 md:h-20 object-contain flex-shrink-0" />
+            <img src={ndLogo} alt="University of Notre Dame" className="h-12 md:h-20 object-contain flex-shrink-0" />
             <div className="hidden sm:block" style={{ borderLeft: "1px solid #DAD7CB", paddingLeft: 12 }}>
-              <div style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: 16, color: "#282728", lineHeight: 1.1 }}>Academic SRM + AI Tutor</div>
-              <div style={{ fontSize: 10, color: "#646569", fontWeight: 500, letterSpacing: 1, textTransform: "uppercase" }}>Powered by JIE Mastery</div>
+              <div style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: 16, color: "#0C2340", lineHeight: 1.1 }}>Academic SRM + AI Tutor</div>
+              <div style={{ fontSize: 10, color: "#C99700", fontWeight: 500, letterSpacing: 1, textTransform: "uppercase" }}>Powered by JIE Mastery</div>
             </div>
           </div>
 
@@ -268,7 +268,7 @@ export default function AuthPage() {
                   borderRadius: 6,
                   fontSize: 14,
                   fontWeight: 500,
-                  color: "#646569",
+                  color: "#C99700",
                   background: "transparent",
                   border: "none",
                   cursor: "pointer",
@@ -276,11 +276,11 @@ export default function AuthPage() {
                   transition: "all 0.15s",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.color = "#C5050C";
-                  e.currentTarget.style.background = "rgba(197,5,12,0.06)";
+                  e.currentTarget.style.color = "#0C2340";
+                  e.currentTarget.style.background = "rgba(12, 35, 64,0.06)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.color = "#646569";
+                  e.currentTarget.style.color = "#C99700";
                   e.currentTarget.style.background = "transparent";
                 }}
               >
@@ -293,11 +293,11 @@ export default function AuthPage() {
             <Button
               onClick={() => { setActiveTab("login"); document.getElementById("auth-section")?.scrollIntoView({ behavior: "smooth" }); }}
               className="text-white font-semibold px-4 md:px-5 py-2 rounded-lg text-xs md:text-sm"
-              style={{ background: "#C5050C" }}>
+              style={{ background: "#0C2340" }}>
               Sign In
             </Button>
             <button className="lg:hidden p-2 rounded-md" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Menu">
-              <Menu className="w-5 h-5" style={{ color: "#282728" }} />
+              <Menu className="w-5 h-5" style={{ color: "#0C2340" }} />
             </button>
           </div>
         </div>
@@ -323,7 +323,7 @@ export default function AuthPage() {
                   setMobileMenuOpen(false);
                 }}
                 className="block w-full text-left px-4 py-3 text-sm font-medium"
-                style={{ color: "#282728", borderBottom: "1px solid rgba(0,0,0,0.04)" }}
+                style={{ color: "#0C2340", borderBottom: "1px solid rgba(0,0,0,0.04)" }}
               >
                 {item.label}
               </button>
@@ -346,56 +346,56 @@ export default function AuthPage() {
            ═══════════════════════════════════════════════════════════════ */}
       <section className="relative" style={{ paddingTop: 100, paddingBottom: 40, background: "linear-gradient(180deg, #FFFFFF 0%, #FFF5F5 100%)" }}>
         <div className="max-w-7xl mx-auto px-4 md:px-12">
-          {/* Badger-red announcement bar */}
+          {/* Fighting Irish-red announcement bar */}
           <div className="flex justify-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: "rgba(197,5,12,0.08)", border: "1px solid rgba(197,5,12,0.2)" }}>
-              <Sparkles className="w-3.5 h-3.5" style={{ color: "#C5050C" }} />
-              <span style={{ fontSize: 12, fontWeight: 700, color: "#C5050C", textTransform: "uppercase", letterSpacing: 1 }}>
-                Built for Badgers · The Next Generation of Academic Support
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: "rgba(12, 35, 64,0.08)", border: "1px solid rgba(12, 35, 64,0.2)" }}>
+              <Sparkles className="w-3.5 h-3.5" style={{ color: "#0C2340" }} />
+              <span style={{ fontSize: 12, fontWeight: 700, color: "#0C2340", textTransform: "uppercase", letterSpacing: 1 }}>
+                Built for Fighting Irish · The Next Generation of Academic Support
               </span>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div style={{ animation: "fadeInUp 0.8s ease" }}>
-              <h1 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(34px, 5.5vw, 60px)", fontWeight: 800, lineHeight: 1.05, color: "#282728", marginBottom: 20, letterSpacing: -1.5 }}>
+              <h1 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(34px, 5.5vw, 60px)", fontWeight: 800, lineHeight: 1.05, color: "#0C2340", marginBottom: 20, letterSpacing: -1.5 }}>
                 Your Academic<br />
-                <span style={{ color: "#C5050C" }}>Command Center.</span>
+                <span style={{ color: "#0C2340" }}>Command Center.</span>
               </h1>
-              <p style={{ fontSize: 18, lineHeight: 1.55, color: "#282728", marginBottom: 16, maxWidth: 520, fontWeight: 600 }}>
+              <p style={{ fontSize: 18, lineHeight: 1.55, color: "#0C2340", marginBottom: 16, maxWidth: 520, fontWeight: 600 }}>
                 The first Student Relationship Manager built for college — with the most advanced AI tutor on the planet baked in.
               </p>
-              <p style={{ fontSize: 16, lineHeight: 1.65, color: "#646569", marginBottom: 28, maxWidth: 520 }}>
+              <p style={{ fontSize: 16, lineHeight: 1.65, color: "#C99700", marginBottom: 28, maxWidth: 520 }}>
                 Upload your syllabi and the system builds your entire semester calendar, generates escalating study tasks, scores your engagement in every course, and alerts you before you fall behind — all while your voice tutor walks into every session already knowing what's due.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-6">
                 <Button onClick={() => { setActiveTab(REGISTRATION_ENABLED ? "register" : "login"); document.getElementById("auth-section")?.scrollIntoView({ behavior: "smooth" }); }}
                   className="text-white font-semibold px-7 py-3 rounded-lg text-base flex items-center justify-center gap-2"
-                  style={{ background: "#C5050C", boxShadow: "0 4px 20px rgba(197,5,12,0.3)" }}>
+                  style={{ background: "#0C2340", boxShadow: "0 4px 20px rgba(12, 35, 64,0.3)" }}>
                   {REGISTRATION_ENABLED ? "Claim Your Command Center" : "Sign In"} <ArrowRight className="w-4 h-4" />
                 </Button>
                 <Button onClick={() => setLocation("/srm")}
                   variant="outline"
                   className="font-semibold px-7 py-3 rounded-lg text-base"
-                  style={{ borderColor: "#C5050C", color: "#C5050C", background: "transparent" }}>
+                  style={{ borderColor: "#0C2340", color: "#0C2340", background: "transparent" }}>
                   See How the SRM Works
                 </Button>
               </div>
 
-              <div className="flex items-center gap-4 flex-wrap" style={{ fontSize: 12, color: "#646569" }}>
+              <div className="flex items-center gap-4 flex-wrap" style={{ fontSize: 12, color: "#C99700" }}>
                 <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5" style={{ color: "#28A745" }} /> Syllabus → calendar in seconds</span>
                 <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5" style={{ color: "#28A745" }} /> Voice tutor 24/7</span>
                 <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5" style={{ color: "#28A745" }} /> Every subject, every level</span>
               </div>
             </div>
 
-            {/* Hero image — Bucky celebrating with graduates at Bascom Hall */}
+            {/* Hero image — the Fighting Irish celebrating with graduates at the Main Building */}
             <div className="flex justify-center items-center">
               <div className="relative w-full max-w-md">
                 <div className="rounded-2xl overflow-hidden shadow-2xl"
                   style={{ transform: "rotate(1.5deg)", border: "4px solid white", boxShadow: "0 20px 50px rgba(0,0,0,0.18)" }}>
-                  <img src={buckyGraduation} alt="Bucky celebrating commencement with UW graduates at Bascom Hall" className="w-full h-auto" />
+                  <img src={ndGraduation} alt="the Fighting Irish celebrating commencement with Notre Dame graduates at the Main Building" className="w-full h-auto" />
                 </div>
               </div>
             </div>
@@ -409,30 +409,30 @@ export default function AuthPage() {
       <section className="py-12 md:py-20 px-4 md:px-12" style={{ background: "#FFFFFF" }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-14">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: "rgba(197,5,12,0.08)", border: "1px solid rgba(197,5,12,0.15)" }}>
-              <Target className="w-3.5 h-3.5" style={{ color: "#C5050C" }} />
-              <span style={{ fontSize: 12, fontWeight: 600, color: "#C5050C", textTransform: "uppercase", letterSpacing: 1 }}>The Five Pillars</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: "rgba(12, 35, 64,0.08)", border: "1px solid rgba(12, 35, 64,0.15)" }}>
+              <Target className="w-3.5 h-3.5" style={{ color: "#0C2340" }} />
+              <span style={{ fontSize: 12, fontWeight: 600, color: "#0C2340", textTransform: "uppercase", letterSpacing: 1 }}>The Five Pillars</span>
             </div>
-            <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(24px, 4vw, 40px)", fontWeight: 800, color: "#282728", lineHeight: 1.15, marginBottom: 8 }}>
-              Everything you need to <span style={{ color: "#C5050C" }}>stay ahead</span> of every course.
+            <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(24px, 4vw, 40px)", fontWeight: 800, color: "#0C2340", lineHeight: 1.15, marginBottom: 8 }}>
+              Everything you need to <span style={{ color: "#0C2340" }}>stay ahead</span> of every course.
             </h2>
-            <p style={{ fontSize: 16, color: "#646569", maxWidth: 640, margin: "0 auto", lineHeight: 1.6, padding: "0 8px" }}>
+            <p style={{ fontSize: 16, color: "#C99700", maxWidth: 640, margin: "0 auto", lineHeight: 1.6, padding: "0 8px" }}>
               Five systems working together. Miss nothing. Fall behind on nothing. Walk into every exam prepared.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
             {[
-              { icon: <Calendar className="w-6 h-6" style={{ color: "#C5050C" }} />, title: "Syllabus Parsing", desc: "Paste a syllabus. AI extracts every exam, quiz, assignment, and project date into your calendar — automatically." },
-              { icon: <CheckCircle className="w-6 h-6" style={{ color: "#C5050C" }} />, title: "Smart Study Tasks", desc: "Tasks auto-generate 7, 3, and 1 day before every deadline — escalating in priority so the work gets done." },
-              { icon: <BarChart3 className="w-6 h-6" style={{ color: "#C5050C" }} />, title: "Engagement Scoring", desc: "A 0–100 weekly score per course tracks sessions, tasks completed, study minutes, and consistency." },
-              { icon: <Mic className="w-6 h-6" style={{ color: "#C5050C" }} />, title: "Voice AI Tutor", desc: "A Socratic-method tutor that knows your syllabus, remembers every session, and explains it your way." },
-              { icon: <Bell className="w-6 h-6" style={{ color: "#C5050C" }} />, title: "Reminders & Alerts", desc: "In-app and email alerts before every deadline. Advisor alerts when engagement drops. You never miss a thing." },
+              { icon: <Calendar className="w-6 h-6" style={{ color: "#0C2340" }} />, title: "Syllabus Parsing", desc: "Paste a syllabus. AI extracts every exam, quiz, assignment, and project date into your calendar — automatically." },
+              { icon: <CheckCircle className="w-6 h-6" style={{ color: "#0C2340" }} />, title: "Smart Study Tasks", desc: "Tasks auto-generate 7, 3, and 1 day before every deadline — escalating in priority so the work gets done." },
+              { icon: <BarChart3 className="w-6 h-6" style={{ color: "#0C2340" }} />, title: "Engagement Scoring", desc: "A 0–100 weekly score per course tracks sessions, tasks completed, study minutes, and consistency." },
+              { icon: <Mic className="w-6 h-6" style={{ color: "#0C2340" }} />, title: "Voice AI Tutor", desc: "A Socratic-method tutor that knows your syllabus, remembers every session, and explains it your way." },
+              { icon: <Bell className="w-6 h-6" style={{ color: "#0C2340" }} />, title: "Reminders & Alerts", desc: "In-app and email alerts before every deadline. Advisor alerts when engagement drops. You never miss a thing." },
             ].map((f, i) => (
               <div key={i} className="rounded-xl md:rounded-2xl p-5 md:p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-default" style={{ background: "#FFFFFF", border: "1px solid #E8E8E8" }}>
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-4" style={{ background: "rgba(197,5,12,0.06)" }}>{f.icon}</div>
-                <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(14px, 2vw, 17px)", fontWeight: 700, marginBottom: 6, color: "#282728" }}>{f.title}</h3>
-                <p style={{ fontSize: 13, lineHeight: 1.55, color: "#646569" }}>{f.desc}</p>
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-4" style={{ background: "rgba(12, 35, 64,0.06)" }}>{f.icon}</div>
+                <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(14px, 2vw, 17px)", fontWeight: 700, marginBottom: 6, color: "#0C2340" }}>{f.title}</h3>
+                <p style={{ fontSize: 13, lineHeight: 1.55, color: "#C99700" }}>{f.desc}</p>
               </div>
             ))}
           </div>
@@ -446,14 +446,14 @@ export default function AuthPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: "rgba(197,5,12,0.08)", border: "1px solid rgba(197,5,12,0.15)" }}>
-                <BookOpen className="w-3.5 h-3.5" style={{ color: "#C5050C" }} />
-                <span style={{ fontSize: 12, fontWeight: 600, color: "#C5050C", textTransform: "uppercase", letterSpacing: 1 }}>Covers every subject · every level</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: "rgba(12, 35, 64,0.08)", border: "1px solid rgba(12, 35, 64,0.15)" }}>
+                <BookOpen className="w-3.5 h-3.5" style={{ color: "#0C2340" }} />
+                <span style={{ fontSize: 12, fontWeight: 600, color: "#0C2340", textTransform: "uppercase", letterSpacing: 1 }}>Covers every subject · every level</span>
               </div>
-              <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(24px, 4vw, 40px)", fontWeight: 800, color: "#282728", lineHeight: 1.15, marginBottom: 16 }}>
-                From freshman seminars to <span style={{ color: "#C5050C" }}>postgrad exam prep.</span>
+              <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(24px, 4vw, 40px)", fontWeight: 800, color: "#0C2340", lineHeight: 1.15, marginBottom: 16 }}>
+                From freshman seminars to <span style={{ color: "#0C2340" }}>postgrad exam prep.</span>
               </h2>
-              <p style={{ fontSize: 16, color: "#646569", lineHeight: 1.65, marginBottom: 20 }}>
+              <p style={{ fontSize: 16, color: "#C99700", lineHeight: 1.65, marginBottom: 20 }}>
                 Whether it's the first week of Econ 101 or three months out from the MCAT, the tutor adapts to where you are in your academic journey. Chemistry, Calculus, Physics, Biology, History, Economics, CS, Writing, Spanish, Philosophy — and test prep for the exam that gets you to the next chapter.
               </p>
               <div className="grid grid-cols-2 gap-3">
@@ -464,19 +464,19 @@ export default function AuthPage() {
                   { label: "Languages", items: "Spanish · French · German · Mandarin · more" },
                 ].map((cat, i) => (
                   <div key={i} className="p-3 rounded-lg" style={{ background: "#FFFFFF", border: "1px solid #E8E8E8" }}>
-                    <p style={{ fontSize: 11, fontWeight: 700, color: "#C5050C", textTransform: "uppercase", letterSpacing: 0.5, marginBottom: 4 }}>{cat.label}</p>
-                    <p style={{ fontSize: 12, color: "#282728", fontWeight: 500, lineHeight: 1.5 }}>{cat.items}</p>
+                    <p style={{ fontSize: 11, fontWeight: 700, color: "#0C2340", textTransform: "uppercase", letterSpacing: 0.5, marginBottom: 4 }}>{cat.label}</p>
+                    <p style={{ fontSize: 12, color: "#0C2340", fontWeight: 500, lineHeight: 1.5 }}>{cat.items}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Memorial Union collage — anchor image */}
+            {/* the Hesburgh Library collage — anchor image */}
             <div className="flex justify-center items-center">
               <div className="relative w-full max-w-lg">
                 <div className="rounded-2xl overflow-hidden shadow-2xl"
                   style={{ transform: "rotate(-1deg)", border: "4px solid white", boxShadow: "0 20px 50px rgba(0,0,0,0.14)" }}>
-                  <img src={memorialUnion} alt="UW Memorial Union and campus scenery" className="w-full h-auto" />
+                  <img src={hesburghReflection} alt="Notre Dame the Hesburgh Library and campus scenery" className="w-full h-auto" />
                 </div>
               </div>
             </div>
@@ -485,7 +485,7 @@ export default function AuthPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
-           PHOTO COLLAGE — Badger campus life
+           PHOTO COLLAGE — Fighting Irish campus life
            ═══════════════════════════════════════════════════════════════ */}
       <PhotoCollage />
 
@@ -495,28 +495,28 @@ export default function AuthPage() {
       <section className="py-12 md:py-20 px-4 md:px-12" style={{ background: "#FAFAFA" }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8 md:mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: "rgba(197,5,12,0.08)", border: "1px solid rgba(197,5,12,0.15)" }}>
-              <Calendar className="w-3.5 h-3.5" style={{ color: "#C5050C" }} />
-              <span style={{ fontSize: 12, fontWeight: 600, color: "#C5050C", textTransform: "uppercase", letterSpacing: 1 }}>The Academic Command Center</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: "rgba(12, 35, 64,0.08)", border: "1px solid rgba(12, 35, 64,0.15)" }}>
+              <Calendar className="w-3.5 h-3.5" style={{ color: "#0C2340" }} />
+              <span style={{ fontSize: 12, fontWeight: 600, color: "#0C2340", textTransform: "uppercase", letterSpacing: 1 }}>The Academic Command Center</span>
             </div>
-            <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(24px, 4vw, 40px)", fontWeight: 800, color: "#282728", lineHeight: 1.15, marginBottom: 8 }}>
-              A Personal <span style={{ color: "#C5050C" }}>Academic Advisor</span> That Never Sleeps.
+            <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(24px, 4vw, 40px)", fontWeight: 800, color: "#0C2340", lineHeight: 1.15, marginBottom: 8 }}>
+              A Personal <span style={{ color: "#0C2340" }}>Academic Advisor</span> That Never Sleeps.
             </h2>
-            <p style={{ fontSize: 16, color: "#646569", maxWidth: 600, margin: "0 auto", lineHeight: 1.6 }}>
+            <p style={{ fontSize: 16, color: "#C99700", maxWidth: 600, margin: "0 auto", lineHeight: 1.6 }}>
               Upload your syllabi and your SRM becomes a proactive academic coach — knowing every deadline, every exam, and exactly where you need to focus.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-5 mb-10">
             {[
-              { icon: <Calendar className="w-6 h-6" style={{ color: "#C5050C" }} />, title: "Syllabus → Calendar in Seconds", desc: "Paste your syllabus and AI extracts every exam, assignment, quiz, and project date. Your entire semester appears on one calendar — instantly." },
-              { icon: <CheckCircle className="w-6 h-6" style={{ color: "#C5050C" }} />, title: "Study Tasks That Write Themselves", desc: "7 days before an exam: \"Begin reviewing.\" 3 days: \"Intensive review.\" 1 day: \"Final review.\" Tasks auto-generate with escalating priority — no willpower needed." },
-              { icon: <Mic className="w-6 h-6" style={{ color: "#C5050C" }} />, title: "A Tutor That Knows Your Semester", desc: "Start a session and hear: \"You have an Organic Chemistry exam Friday. You've completed 2 of 4 prep tasks. Want to review mechanisms?\" Context-aware from day one." },
+              { icon: <Calendar className="w-6 h-6" style={{ color: "#0C2340" }} />, title: "Syllabus → Calendar in Seconds", desc: "Paste your syllabus and AI extracts every exam, assignment, quiz, and project date. Your entire semester appears on one calendar — instantly." },
+              { icon: <CheckCircle className="w-6 h-6" style={{ color: "#0C2340" }} />, title: "Study Tasks That Write Themselves", desc: "7 days before an exam: \"Begin reviewing.\" 3 days: \"Intensive review.\" 1 day: \"Final review.\" Tasks auto-generate with escalating priority — no willpower needed." },
+              { icon: <Mic className="w-6 h-6" style={{ color: "#0C2340" }} />, title: "A Tutor That Knows Your Semester", desc: "Start a session and hear: \"You have an Organic Chemistry exam Friday. You've completed 2 of 4 prep tasks. Want to review mechanisms?\" Context-aware from day one." },
             ].map((f, i) => (
               <div key={i} className="rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" style={{ background: "#FFFFFF", border: "1px solid #E8E8E8" }}>
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: "rgba(197,5,12,0.06)" }}>{f.icon}</div>
-                <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: 18, fontWeight: 700, marginBottom: 8, color: "#282728" }}>{f.title}</h3>
-                <p style={{ fontSize: 14, lineHeight: 1.65, color: "#646569" }}>{f.desc}</p>
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: "rgba(12, 35, 64,0.06)" }}>{f.icon}</div>
+                <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: 18, fontWeight: 700, marginBottom: 8, color: "#0C2340" }}>{f.title}</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.65, color: "#C99700" }}>{f.desc}</p>
               </div>
             ))}
           </div>
@@ -524,23 +524,23 @@ export default function AuthPage() {
           <div className="grid md:grid-cols-2 gap-5 mb-8">
             <div className="rounded-2xl p-6" style={{ background: "#FFFFFF", border: "1px solid #E8E8E8" }}>
               <div className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(197,5,12,0.06)" }}>
-                  <TrendingUp className="w-5 h-5" style={{ color: "#C5050C" }} />
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(12, 35, 64,0.06)" }}>
+                  <TrendingUp className="w-5 h-5" style={{ color: "#0C2340" }} />
                 </div>
                 <div>
-                  <h4 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: 16, color: "#282728", marginBottom: 4 }}>Engagement Scoring (0–100)</h4>
-                  <p style={{ fontSize: 14, color: "#646569", lineHeight: 1.5 }}>A weekly score tracks your tutoring sessions, task completion, study time, and consistency. See at a glance which courses need more attention — before it's too late.</p>
+                  <h4 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: 16, color: "#0C2340", marginBottom: 4 }}>Engagement Scoring (0–100)</h4>
+                  <p style={{ fontSize: 14, color: "#C99700", lineHeight: 1.5 }}>A weekly score tracks your tutoring sessions, task completion, study time, and consistency. See at a glance which courses need more attention — before it's too late.</p>
                 </div>
               </div>
             </div>
             <div className="rounded-2xl p-6" style={{ background: "#FFFFFF", border: "1px solid #E8E8E8" }}>
               <div className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(197,5,12,0.06)" }}>
-                  <Shield className="w-5 h-5" style={{ color: "#C5050C" }} />
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(12, 35, 64,0.06)" }}>
+                  <Shield className="w-5 h-5" style={{ color: "#0C2340" }} />
                 </div>
                 <div>
-                  <h4 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: 16, color: "#282728", marginBottom: 4 }}>Early Intervention for Advisors</h4>
-                  <p style={{ fontSize: 14, color: "#646569", lineHeight: 1.5 }}>Academic advisors and coaches see automated alerts when a student drops off — declining engagement, missed deadlines, or an exam approaching with zero prep. Intervention happens early.</p>
+                  <h4 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: 16, color: "#0C2340", marginBottom: 4 }}>Early Intervention for Advisors</h4>
+                  <p style={{ fontSize: 14, color: "#C99700", lineHeight: 1.5 }}>Academic advisors and coaches see automated alerts when a student drops off — declining engagement, missed deadlines, or an exam approaching with zero prep. Intervention happens early.</p>
                 </div>
               </div>
             </div>
@@ -550,7 +550,7 @@ export default function AuthPage() {
             <button
               onClick={() => setLocation("/srm")}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-base transition-all hover:shadow-lg"
-              style={{ background: "#C5050C", color: "#FFFFFF", boxShadow: "0 4px 20px rgba(197,5,12,0.2)" }}>
+              style={{ background: "#0C2340", color: "#FFFFFF", boxShadow: "0 4px 20px rgba(12, 35, 64,0.2)" }}>
               Learn More About the SRM <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -562,23 +562,23 @@ export default function AuthPage() {
            ═══════════════════════════════════════════════════════════════ */}
       <section className="py-12 md:py-20 px-4 md:px-12 max-w-7xl mx-auto" style={{ background: "#FFFFFF" }}>
         <div className="text-center mb-8 md:mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: "rgba(197,5,12,0.08)", border: "1px solid rgba(197,5,12,0.15)" }}>
-            <span style={{ fontSize: 12, fontWeight: 600, color: "#C5050C", textTransform: "uppercase", letterSpacing: 1 }}>Built Different</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: "rgba(12, 35, 64,0.08)", border: "1px solid rgba(12, 35, 64,0.15)" }}>
+            <span style={{ fontSize: 12, fontWeight: 600, color: "#0C2340", textTransform: "uppercase", letterSpacing: 1 }}>Built Different</span>
           </div>
-          <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(24px, 4vw, 40px)", fontWeight: 800, color: "#282728", lineHeight: 1.15, marginBottom: 8 }}>
+          <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(24px, 4vw, 40px)", fontWeight: 800, color: "#0C2340", lineHeight: 1.15, marginBottom: 8 }}>
             Not ChatGPT. Not a Traditional Tutor.
           </h2>
-          <p style={{ fontSize: 16, color: "#646569", maxWidth: 560, margin: "0 auto", lineHeight: 1.6 }}>
-            UW–Madison's Academic SRM combines the best of both — and adds a layer of intelligence neither can offer.
+          <p style={{ fontSize: 16, color: "#C99700", maxWidth: 560, margin: "0 auto", lineHeight: 1.6 }}>
+            Notre Dame's Academic SRM combines the best of both — and adds a layer of intelligence neither can offer.
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden" style={{ border: "1px solid #E8E8E8", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
           <div className="grid grid-cols-4 text-center font-semibold" style={{ borderBottom: "1px solid #E8E8E8" }}>
             <div className="p-3 md:p-4" style={{ background: "#F8F8F8" }}></div>
-            <div className="p-3 md:p-4" style={{ background: "#F8F8F8", fontSize: 13, color: "#646569" }}>Traditional Tutoring</div>
-            <div className="p-3 md:p-4" style={{ background: "#F8F8F8", fontSize: 13, color: "#646569" }}>ChatGPT</div>
-            <div className="p-3 md:p-4" style={{ background: "rgba(197,5,12,0.06)", fontSize: 13, color: "#C5050C", fontWeight: 700 }}>UW AI Tutor + SRM</div>
+            <div className="p-3 md:p-4" style={{ background: "#F8F8F8", fontSize: 13, color: "#C99700" }}>Traditional Tutoring</div>
+            <div className="p-3 md:p-4" style={{ background: "#F8F8F8", fontSize: 13, color: "#C99700" }}>ChatGPT</div>
+            <div className="p-3 md:p-4" style={{ background: "rgba(12, 35, 64,0.06)", fontSize: 13, color: "#0C2340", fontWeight: 700 }}>Notre Dame AI Tutor + SRM</div>
           </div>
 
           {[
@@ -599,21 +599,21 @@ export default function AuthPage() {
             { feature: "Academic integrity", trad: true, gpt: false, jie: "Socratic method — guides, never gives answers" },
           ].map((row, i) => (
             <div key={i} className="grid grid-cols-4 text-center" style={{ borderBottom: "1px solid #F0F0F0", background: i % 2 === 0 ? "#FFFFFF" : "#FAFAFA" }}>
-              <div className="p-2.5 md:p-3 text-left font-medium" style={{ fontSize: 13, color: "#282728", background: i % 2 === 0 ? "#FAFAFA" : "#F5F5F5" }}>{row.feature}</div>
+              <div className="p-2.5 md:p-3 text-left font-medium" style={{ fontSize: 13, color: "#0C2340", background: i % 2 === 0 ? "#FAFAFA" : "#F5F5F5" }}>{row.feature}</div>
               <div className="p-2.5 md:p-3 flex items-center justify-center">
-                {row.trad === true ? <CheckCircle className="w-4 h-4" style={{ color: "#646569" }} /> :
+                {row.trad === true ? <CheckCircle className="w-4 h-4" style={{ color: "#C99700" }} /> :
                  row.trad === false ? <X className="w-4 h-4" style={{ color: "#D4D4D4" }} /> :
-                 <span style={{ fontSize: 11, color: "#646569" }}>{row.trad}</span>}
+                 <span style={{ fontSize: 11, color: "#C99700" }}>{row.trad}</span>}
               </div>
               <div className="p-2.5 md:p-3 flex items-center justify-center">
-                {row.gpt === true ? <CheckCircle className="w-4 h-4" style={{ color: "#646569" }} /> :
+                {row.gpt === true ? <CheckCircle className="w-4 h-4" style={{ color: "#C99700" }} /> :
                  row.gpt === false ? <X className="w-4 h-4" style={{ color: "#D4D4D4" }} /> :
-                 <span style={{ fontSize: 11, color: "#646569" }}>{row.gpt}</span>}
+                 <span style={{ fontSize: 11, color: "#C99700" }}>{row.gpt}</span>}
               </div>
-              <div className="p-2.5 md:p-3" style={{ background: "rgba(197,5,12,0.03)" }}>
+              <div className="p-2.5 md:p-3" style={{ background: "rgba(12, 35, 64,0.03)" }}>
                 <div className="flex items-start gap-1.5 pl-2">
                   <CheckCircle className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" style={{ color: "#28A745" }} />
-                  <span style={{ fontSize: 11, color: "#282728", fontWeight: 500, textAlign: "left" }}>{row.jie}</span>
+                  <span style={{ fontSize: 11, color: "#0C2340", fontWeight: 500, textAlign: "left" }}>{row.jie}</span>
                 </div>
               </div>
             </div>
@@ -630,24 +630,24 @@ export default function AuthPage() {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: "rgba(40,167,69,0.08)", border: "1px solid rgba(40,167,69,0.15)" }}>
               <span style={{ fontSize: 12, fontWeight: 600, color: "#28A745", textTransform: "uppercase", letterSpacing: 1 }}>What No Other AI Can Do</span>
             </div>
-            <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(24px, 4vw, 40px)", fontWeight: 800, color: "#282728", lineHeight: 1.15, marginBottom: 8 }}>
-              It Gets <span style={{ color: "#C5050C" }}>Smarter</span> Every Session
+            <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(24px, 4vw, 40px)", fontWeight: 800, color: "#0C2340", lineHeight: 1.15, marginBottom: 8 }}>
+              It Gets <span style={{ color: "#0C2340" }}>Smarter</span> Every Session
             </h2>
-            <p style={{ fontSize: 16, color: "#646569", maxWidth: 600, margin: "0 auto", lineHeight: 1.6 }}>
-              ChatGPT forgets everything when you close the window. Your UW AI Tutor builds a permanent learning profile that compounds over time.
+            <p style={{ fontSize: 16, color: "#C99700", maxWidth: 600, margin: "0 auto", lineHeight: 1.6 }}>
+              ChatGPT forgets everything when you close the window. Your Notre Dame AI Tutor builds a permanent learning profile that compounds over time.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10">
             {[
-              { icon: <Brain className="w-6 h-6" style={{ color: "#C5050C" }} />, title: "It Remembers Everything", desc: "After 20 sessions, your tutor knows you struggle with organic chemistry nomenclature, learn best with real-world analogies, and need extra time on thermodynamics. Every session makes the next one better." },
-              { icon: <Sparkles className="w-6 h-6" style={{ color: "#C5050C" }} />, title: "It Adapts Its Teaching", desc: "If step-by-step derivations work better for you than big-picture explanations, the tutor adjusts. It tracks which strategies are effective for you specifically and applies them automatically." },
-              { icon: <TrendingUp className="w-6 h-6" style={{ color: "#C5050C" }} />, title: "You See Real Progress", desc: "Mastery scores by concept, session summaries after every conversation, and growth tracking over weeks. See exactly where you're strong and where you need to focus before the exam." },
+              { icon: <Brain className="w-6 h-6" style={{ color: "#0C2340" }} />, title: "It Remembers Everything", desc: "After 20 sessions, your tutor knows you struggle with organic chemistry nomenclature, learn best with real-world analogies, and need extra time on thermodynamics. Every session makes the next one better." },
+              { icon: <Sparkles className="w-6 h-6" style={{ color: "#0C2340" }} />, title: "It Adapts Its Teaching", desc: "If step-by-step derivations work better for you than big-picture explanations, the tutor adjusts. It tracks which strategies are effective for you specifically and applies them automatically." },
+              { icon: <TrendingUp className="w-6 h-6" style={{ color: "#0C2340" }} />, title: "You See Real Progress", desc: "Mastery scores by concept, session summaries after every conversation, and growth tracking over weeks. See exactly where you're strong and where you need to focus before the exam." },
             ].map((f, i) => (
               <div key={i} className="rounded-2xl p-6 md:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" style={{ background: "#FFFFFF", border: "1px solid #E8E8E8" }}>
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: "rgba(197,5,12,0.06)" }}>{f.icon}</div>
-                <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: 18, fontWeight: 700, marginBottom: 8, color: "#282728" }}>{f.title}</h3>
-                <p style={{ fontSize: 14, lineHeight: 1.65, color: "#646569" }}>{f.desc}</p>
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: "rgba(12, 35, 64,0.06)" }}>{f.icon}</div>
+                <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: 18, fontWeight: 700, marginBottom: 8, color: "#0C2340" }}>{f.title}</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.65, color: "#C99700" }}>{f.desc}</p>
               </div>
             ))}
           </div>
@@ -656,28 +656,28 @@ export default function AuthPage() {
             <div className="grid md:grid-cols-2">
               <div className="p-6 md:p-8" style={{ borderBottom: "1px solid #E8E8E8", background: "#FFFFFF" }}>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style={{ background: "#F0F0F0", color: "#646569" }}>1</div>
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style={{ background: "#F0F0F0", color: "#C99700" }}>1</div>
                   <div>
-                    <p style={{ fontWeight: 700, color: "#282728", fontSize: 15 }}>Session 1</p>
-                    <p style={{ fontSize: 12, color: "#646569" }}>Any AI tool can do this</p>
+                    <p style={{ fontWeight: 700, color: "#0C2340", fontSize: 15 }}>Session 1</p>
+                    <p style={{ fontSize: 12, color: "#C99700" }}>Any AI tool can do this</p>
                   </div>
                 </div>
                 <div className="space-y-2.5">
                   {["Generic introduction, no context about your coursework", "Doesn't know your major or what you're studying", "Uses default explanations for everyone", "No idea what you already understand"].map((t, i) => (
                     <div key={i} className="flex items-start gap-2">
                       <div className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ background: "#D4D4D4" }} />
-                      <span style={{ fontSize: 13, color: "#646569" }}>{t}</span>
+                      <span style={{ fontSize: 13, color: "#C99700" }}>{t}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="p-6 md:p-8" style={{ background: "rgba(197,5,12,0.03)" }}>
+              <div className="p-6 md:p-8" style={{ background: "rgba(12, 35, 64,0.03)" }}>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm text-white" style={{ background: "#C5050C" }}>20</div>
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm text-white" style={{ background: "#0C2340" }}>20</div>
                   <div>
-                    <p style={{ fontWeight: 700, color: "#282728", fontSize: 15 }}>Session 20</p>
-                    <p style={{ fontSize: 12, fontWeight: 600, color: "#C5050C" }}>Only UW–Madison AI Tutor can do this</p>
+                    <p style={{ fontWeight: 700, color: "#0C2340", fontSize: 15 }}>Session 20</p>
+                    <p style={{ fontSize: 12, fontWeight: 600, color: "#0C2340" }}>Only Notre Dame AI Tutor can do this</p>
                   </div>
                 </div>
                 <div className="space-y-2.5">
@@ -689,7 +689,7 @@ export default function AuthPage() {
                   ].map((t, i) => (
                     <div key={i} className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "#28A745" }} />
-                      <span style={{ fontSize: 13, color: "#282728", fontWeight: 500 }}>{t}</span>
+                      <span style={{ fontSize: 13, color: "#0C2340", fontWeight: 500 }}>{t}</span>
                     </div>
                   ))}
                 </div>
@@ -697,63 +697,63 @@ export default function AuthPage() {
             </div>
           </div>
 
-          <p className="text-center mt-6" style={{ fontSize: 14, color: "#646569" }}>
-            ChatGPT starts cold every conversation. Your UW AI Tutor has 20 sessions of intelligence about how you learn.
-            <br /><strong style={{ color: "#282728" }}>That gap grows every single session.</strong>
+          <p className="text-center mt-6" style={{ fontSize: 14, color: "#C99700" }}>
+            ChatGPT starts cold every conversation. Your Notre Dame AI Tutor has 20 sessions of intelligence about how you learn.
+            <br /><strong style={{ color: "#0C2340" }}>That gap grows every single session.</strong>
           </p>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
-           STUDENT-ATHLETE SECTION — with Bucky touchdown banner
+           STUDENT-ATHLETE SECTION — with the Fighting Irish touchdown banner
            ═══════════════════════════════════════════════════════════════ */}
       <section className="py-12 md:py-20 px-4 md:px-12 max-w-7xl mx-auto" style={{ background: "#FFFFFF" }}>
         <div className="max-w-4xl mx-auto">
           <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid #E8E8E8", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
-            {/* Football banner image — full-height, crop-positioned to show Bucky's face */}
+            {/* Football banner image — full-height, crop-positioned to show the Fighting Irish's face */}
             <div className="relative overflow-hidden" style={{ minHeight: 220, height: "clamp(220px, 32vw, 320px)" }}>
               <img
-                src={buckyFootball}
-                alt="Bucky scoring a touchdown at Camp Randall Stadium"
+                src={irishFans}
+                alt="the Fighting Irish scoring a touchdown at Notre Dame Stadium"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: "center 22%" }}
               />
-              <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(197,5,12,0) 45%, rgba(197,5,12,0.78) 100%)" }} />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(12, 35, 64,0) 45%, rgba(12, 35, 64,0.78) 100%)" }} />
               <div className="absolute bottom-4 left-6 right-6">
                 <p className="text-white font-bold" style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: 14, letterSpacing: 1, textTransform: "uppercase" }}>For Student Athletes</p>
               </div>
             </div>
             <div className="p-6 md:p-10" style={{ background: "#FFF7ED" }}>
-              <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 800, color: "#282728", marginBottom: 12 }}>
+              <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 800, color: "#0C2340", marginBottom: 12 }}>
                 Built for Your Schedule, Not the Other Way Around
               </h3>
-              <p style={{ fontSize: 15, color: "#646569", lineHeight: 1.65, marginBottom: 24 }}>
+              <p style={{ fontSize: 15, color: "#C99700", lineHeight: 1.65, marginBottom: 24 }}>
                 Travel schedules, practice commitments, and game-day recovery make office hours nearly impossible. Your SRM and tutor adapt to your life.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { icon: <Clock className="w-5 h-5" style={{ color: "#C5050C" }} />, title: "Available 24/7", desc: "Study at 11 PM after a road game. Review before a 6 AM flight. No scheduling conflicts." },
-                  { icon: <Mic className="w-5 h-5" style={{ color: "#C5050C" }} />, title: "Travel-Ready", desc: "Voice tutoring on any device. Study by speaking — on the bus, in the hotel, between events." },
-                  { icon: <BookOpen className="w-5 h-5" style={{ color: "#C5050C" }} />, title: "Every Subject, One Tutor", desc: "No scheduling three specialists for Econ, Bio, and Spanish. One tutor covers the full course load." },
-                  { icon: <Brain className="w-5 h-5" style={{ color: "#C5050C" }} />, title: "Remembers Everything", desc: "Missed two weeks for conference play? The tutor knows exactly where you left off and what gaps need filling." },
+                  { icon: <Clock className="w-5 h-5" style={{ color: "#0C2340" }} />, title: "Available 24/7", desc: "Study at 11 PM after a road game. Review before a 6 AM flight. No scheduling conflicts." },
+                  { icon: <Mic className="w-5 h-5" style={{ color: "#0C2340" }} />, title: "Travel-Ready", desc: "Voice tutoring on any device. Study by speaking — on the bus, in the hotel, between events." },
+                  { icon: <BookOpen className="w-5 h-5" style={{ color: "#0C2340" }} />, title: "Every Subject, One Tutor", desc: "No scheduling three specialists for Econ, Bio, and Spanish. One tutor covers the full course load." },
+                  { icon: <Brain className="w-5 h-5" style={{ color: "#0C2340" }} />, title: "Remembers Everything", desc: "Missed two weeks for conference play? The tutor knows exactly where you left off and what gaps need filling." },
                 ].map((f, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 rounded-xl" style={{ background: "rgba(255,255,255,0.8)", border: "1px solid rgba(0,0,0,0.06)" }}>
-                    <div className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "rgba(197,5,12,0.06)" }}>{f.icon}</div>
+                    <div className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "rgba(12, 35, 64,0.06)" }}>{f.icon}</div>
                     <div>
-                      <p style={{ fontWeight: 700, fontSize: 14, color: "#282728", marginBottom: 2 }}>{f.title}</p>
-                      <p style={{ fontSize: 13, color: "#646569", lineHeight: 1.5 }}>{f.desc}</p>
+                      <p style={{ fontWeight: 700, fontSize: 14, color: "#0C2340", marginBottom: 2 }}>{f.title}</p>
+                      <p style={{ fontSize: 13, color: "#C99700", lineHeight: 1.5 }}>{f.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-6 p-4 rounded-xl" style={{ background: "rgba(197,5,12,0.06)", border: "1px solid rgba(197,5,12,0.12)" }}>
+              <div className="mt-6 p-4 rounded-xl" style={{ background: "rgba(12, 35, 64,0.06)", border: "1px solid rgba(12, 35, 64,0.12)" }}>
                 <div className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: "#C5050C" }} />
+                  <Shield className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: "#0C2340" }} />
                   <div>
-                    <p style={{ fontWeight: 700, fontSize: 14, color: "#282728", marginBottom: 2 }}>Eligibility Protection</p>
-                    <p style={{ fontSize: 13, color: "#646569", lineHeight: 1.5 }}>Early intervention flags alert academic advisors when a student-athlete shows signs of academic difficulty — weeks before midterm grades. Protect your eligibility proactively.</p>
+                    <p style={{ fontWeight: 700, fontSize: 14, color: "#0C2340", marginBottom: 2 }}>Eligibility Protection</p>
+                    <p style={{ fontSize: 13, color: "#C99700", lineHeight: 1.5 }}>Early intervention flags alert academic advisors when a student-athlete shows signs of academic difficulty — weeks before midterm grades. Protect your eligibility proactively.</p>
                   </div>
                 </div>
               </div>
@@ -767,15 +767,15 @@ export default function AuthPage() {
            ═══════════════════════════════════════════════════════════════ */}
       <section className="py-10 md:py-16 px-4 md:px-12" style={{ background: "#FAFAFA" }}>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(20px, 3vw, 30px)", fontWeight: 800, color: "#282728", marginBottom: 8 }}>
+          <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(20px, 3vw, 30px)", fontWeight: 800, color: "#0C2340", marginBottom: 8 }}>
             Post-Graduate & Professional Exam Prep
           </h2>
-          <p style={{ fontSize: 15, color: "#646569", maxWidth: 520, margin: "0 auto 24px", lineHeight: 1.6 }}>
+          <p style={{ fontSize: 15, color: "#C99700", maxWidth: 520, margin: "0 auto 24px", lineHeight: 1.6 }}>
             The same adaptive intelligence that powers your coursework tutoring — applied to high-stakes exams.
           </p>
           <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {["GRE", "GMAT", "LSAT", "MCAT", "DAT", "PCAT", "OAT", "CFA", "CPA", "Series 7", "FE", "PE", "NCLEX", "PANCE", "Praxis", "ASWB"].map((exam) => (
-              <span key={exam} className="px-3 py-1.5 rounded-lg text-sm font-semibold" style={{ background: "#FFFFFF", border: "1px solid #E8E8E8", color: "#282728" }}>
+              <span key={exam} className="px-3 py-1.5 rounded-lg text-sm font-semibold" style={{ background: "#FFFFFF", border: "1px solid #E8E8E8", color: "#0C2340" }}>
                 {exam}
               </span>
             ))}
@@ -788,15 +788,16 @@ export default function AuthPage() {
            ═══════════════════════════════════════════════════════════════ */}
       <section id="auth-section" className="py-12 md:py-20 px-4 md:px-12 max-w-7xl mx-auto" style={{ background: "#FFFFFF" }}>
         <div className="grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden shadow-2xl" style={{ maxWidth: 960, margin: "0 auto" }}>
-          <div className="relative p-8 md:p-16 flex flex-col justify-center overflow-hidden" style={{ background: "#C5050C" }}>
-            {/* Subtle Bucky classroom photo as background accent */}
+          <div className="relative p-8 md:p-16 flex flex-col justify-center overflow-hidden" style={{ background: "#0C2340" }}>
+            {/* Subtle the Fighting Irish classroom photo as background accent */}
             <div className="absolute inset-0 opacity-[0.12] pointer-events-none">
-              <img src={buckyClassroom} alt="" className="w-full h-full object-cover" />
+              <img src={ndClassroom} alt="" className="w-full h-full object-cover" />
             </div>
             <div className="absolute inset-0 opacity-[0.06] pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 40px, white 40px, white 41px)" }} />
             <div className="relative z-10">
-              <div className="mb-6 md:mb-10" style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 800, fontSize: 20, color: "white", letterSpacing: 1 }}>UNIVERSITY OF WISCONSIN–MADISON</div>
-              <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 700, color: "white", lineHeight: 1.15, marginBottom: 16 }}>Welcome, Badger.</h2>
+              <div className="mb-3" style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 800, fontSize: 20, color: "white", letterSpacing: 1 }}>UNIVERSITY OF NOTRE DAME</div>
+              <div className="mb-6 md:mb-10" style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: 12, color: "#C99700", letterSpacing: 3, textTransform: "uppercase" }}>God, Country, Notre Dame</div>
+              <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 700, color: "white", lineHeight: 1.15, marginBottom: 16 }}>Welcome, Fighting Irish.</h2>
               <p style={{ fontSize: 16, color: "rgba(255,255,255,0.85)", lineHeight: 1.6, maxWidth: 360 }}>Your Academic Command Center is ready. Sign in to upload a syllabus, start a voice session, or check your engagement score.</p>
             </div>
           </div>
@@ -810,15 +811,15 @@ export default function AuthPage() {
               <div className="flex mb-6 md:mb-8 rounded-lg p-1" style={{ background: "#F3F3F3" }}>
                 {(["login", "register"] as const).map(tab => (
                   <button key={tab} onClick={() => { setActiveTab(tab); loginForm.reset(); registerForm.reset(); }} className="flex-1 py-2.5 rounded-md text-sm font-semibold transition-all"
-                    style={{ background: activeTab === tab ? "white" : "transparent", color: activeTab === tab ? "#282728" : "#646569", boxShadow: activeTab === tab ? "0 1px 3px rgba(0,0,0,0.08)" : "none" }}>
+                    style={{ background: activeTab === tab ? "white" : "transparent", color: activeTab === tab ? "#0C2340" : "#C99700", boxShadow: activeTab === tab ? "0 1px 3px rgba(0,0,0,0.08)" : "none" }}>
                     {tab === "login" ? "Sign In" : "Create Account"}
                   </button>
                 ))}
               </div>
             ) : (
               <div className="mb-6 md:mb-8 text-center">
-                <h2 className="text-2xl font-bold" style={{ color: "#282728" }}>Sign In</h2>
-                <p className="text-sm mt-2" style={{ color: "#646569" }}>
+                <h2 className="text-2xl font-bold" style={{ color: "#0C2340" }}>Sign In</h2>
+                <p className="text-sm mt-2" style={{ color: "#C99700" }}>
                   Need an account? Contact your administrator.
                 </p>
               </div>
@@ -855,11 +856,11 @@ export default function AuthPage() {
                       </Button>
                     </div>
                   )}
-                  <Button type="submit" disabled={loginMutation.isPending} className="w-full h-11 md:h-12 text-white font-semibold rounded-lg text-base" style={{ background: "#C5050C" }}>
+                  <Button type="submit" disabled={loginMutation.isPending} className="w-full h-11 md:h-12 text-white font-semibold rounded-lg text-base" style={{ background: "#0C2340" }}>
                     {loginMutation.isPending ? "Signing in..." : "Sign In"}
                   </Button>
                   {loginMutation.isError && <p className="text-sm text-center" style={{ color: "#DC3545" }}>{(loginMutation.error as any)?.message || "Invalid credentials"}</p>}
-                  <a href="/forgot-password" className="block text-center text-sm hover:underline" style={{ color: "#646569" }}>Forgot password?</a>
+                  <a href="/forgot-password" className="block text-center text-sm hover:underline" style={{ color: "#C99700" }}>Forgot password?</a>
                 </form>
               </Form>
             ) : (
@@ -908,7 +909,7 @@ export default function AuthPage() {
                       <FormMessage />
                     </FormItem>
                   )} />
-                  <Button type="submit" disabled={registerMutation.isPending} className="w-full h-11 md:h-12 text-white font-semibold rounded-lg text-base" style={{ background: "#C5050C" }}
+                  <Button type="submit" disabled={registerMutation.isPending} className="w-full h-11 md:h-12 text-white font-semibold rounded-lg text-base" style={{ background: "#0C2340" }}
                     onClick={() => registerForm.setValue("studentName", registerForm.getValues("accountName") || "Student")}>
                     {registerMutation.isPending ? "Creating account..." : "Create Account"}
                   </Button>
@@ -923,8 +924,8 @@ export default function AuthPage() {
       {/* Footer */}
       <footer className="py-8 md:py-10 px-4 md:px-12 max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4" style={{ borderTop: "1px solid #E8E8E8", background: "#FFFFFF" }}>
         <div className="flex items-center gap-3">
-          <img src={uwLogo} alt="University of Wisconsin–Madison" className="h-8 object-contain" />
-          <span style={{ fontSize: 12, color: "#646569" }}>University of Wisconsin–Madison · Academic SRM + AI Tutor</span>
+          <img src={ndLogo} alt="University of Notre Dame" className="h-8 object-contain" />
+          <span style={{ fontSize: 12, color: "#C99700" }}>University of Notre Dame · Academic SRM + AI Tutor</span>
         </div>
         <span style={{ fontSize: 11, color: "#DAD7CB" }}>Powered by JIE Mastery</span>
       </footer>

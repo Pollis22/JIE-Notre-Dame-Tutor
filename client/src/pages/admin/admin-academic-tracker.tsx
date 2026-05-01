@@ -180,7 +180,7 @@ export default function AdminAcademicTracker() {
             <CardContent className="pt-4 pb-4">
               <div className="text-sm text-muted-foreground">Avg Engagement</div>
               <div className="text-2xl font-bold" style={{
-                color: (reporting?.avgEngagement || 0) >= 70 ? "#16a34a" : (reporting?.avgEngagement || 0) >= 50 ? "#ca8a04" : "#dc2626"
+                color: (reporting?.avgEngagement || 0) >= 70 ? "#16a34a" : (reporting?.avgEngagement || 0) >= 50 ? "#ca8a04" : "#0C2340"
               }}>
                 {Math.round(reporting?.avgEngagement || 0)}/100
               </div>
@@ -325,7 +325,7 @@ export default function AdminAcademicTracker() {
                                 className="w-full rounded-t"
                                 style={{
                                   height: `${height}%`,
-                                  background: score >= 70 ? "#16a34a" : score >= 50 ? "#ca8a04" : score >= 30 ? "#ea580c" : "#dc2626",
+                                  background: score >= 70 ? "#16a34a" : score >= 50 ? "#ca8a04" : score >= 30 ? "#ea580c" : "#0C2340",
                                 }}
                               />
                               <span className="text-xs text-muted-foreground">{entry.weekStart?.slice(5)}</span>
@@ -403,7 +403,7 @@ export default function AdminAcademicTracker() {
                                 <td className="px-4 py-3">
                                   {s.engagementScore !== null ? (
                                     <span className="font-medium" style={{
-                                      color: s.engagementScore >= 70 ? "#16a34a" : s.engagementScore >= 50 ? "#ca8a04" : "#dc2626"
+                                      color: s.engagementScore >= 70 ? "#16a34a" : s.engagementScore >= 50 ? "#ca8a04" : "#0C2340"
                                     }}>
                                       {Math.round(s.engagementScore)}
                                     </span>
@@ -503,7 +503,7 @@ export default function AdminAcademicTracker() {
                           on_track: "#16a34a",
                           needs_attention: "#ca8a04",
                           at_risk: "#ea580c",
-                          critical: "#dc2626",
+                          critical: "#0C2340",
                         };
                         return (
                           <div key={entry.riskLevel} className="flex items-center gap-3">
@@ -540,7 +540,7 @@ export default function AdminAcademicTracker() {
                         <div key={course.courseId} className="flex items-center justify-between">
                           <span className="text-sm">{course.courseName}</span>
                           <span className="font-medium" style={{
-                            color: Number(course.avgScore) >= 70 ? "#16a34a" : Number(course.avgScore) >= 50 ? "#ca8a04" : "#dc2626"
+                            color: Number(course.avgScore) >= 70 ? "#16a34a" : Number(course.avgScore) >= 50 ? "#ca8a04" : "#0C2340"
                           }}>
                             {Math.round(Number(course.avgScore))}
                           </span>
@@ -570,7 +570,7 @@ export default function AdminAcademicTracker() {
               <Input
                 value={nudgeSubject}
                 onChange={e => setNudgeSubject(e.target.value)}
-                placeholder="A message from your academic advisor — University of Wisconsin AI Tutor"
+                placeholder="A message from your academic advisor — University of Notre Dame AI Tutor"
               />
             </div>
             <div>
@@ -578,7 +578,7 @@ export default function AdminAcademicTracker() {
               <Textarea
                 value={nudgeMessage}
                 onChange={e => setNudgeMessage(e.target.value)}
-                placeholder="Hi! We noticed you haven't been active recently. Your University of Wisconsin AI Tutor is here to help you succeed..."
+                placeholder="Hi! We noticed you haven't been active recently. Your Notre Dame AI Tutor is here to help you succeed..."
                 className="min-h-[150px]"
               />
             </div>
@@ -590,7 +590,7 @@ export default function AdminAcademicTracker() {
                 if (showNudgeDialog && nudgeMessage) {
                   nudgeMutation.mutate({
                     studentEmail: showNudgeDialog.email,
-                    subject: nudgeSubject || "A message from your academic advisor — University of Wisconsin AI Tutor",
+                    subject: nudgeSubject || "A message from your academic advisor — University of Notre Dame AI Tutor",
                     message: nudgeMessage,
                   });
                 }

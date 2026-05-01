@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { PublicMobileMenu } from "@/components/PublicMobileMenu";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, HelpCircle, Mail, MessageCircle } from "lucide-react";
-import suLogo from '@/assets/uw-madison-logo.png';
+import ndLogo from '@/assets/notre-dame-logo.png';
 import { LiveChatWidget } from "@/components/LiveChatWidget";
 
 export default function SupportPage() {
@@ -16,8 +16,8 @@ export default function SupportPage() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-3 cursor-pointer" onClick={() => setLocation("/auth")}>
-              <img src={suLogo} alt="University of Wisconsin AI Tutor" className="h-10 w-auto" />
-              <span className="text-xl font-bold text-foreground">University of Wisconsin AI Tutor</span>
+              <img src={ndLogo} alt="Notre Dame AI Tutor" className="h-10 w-auto" />
+              <span className="text-xl font-bold text-foreground">University of Notre Dame AI Tutor</span>
             </div>
             <div className="hidden md:flex items-center space-x-4">
               <Button 
@@ -25,7 +25,7 @@ export default function SupportPage() {
                 onClick={() => setLocation("/benefits")} 
                 data-testid="button-nav-benefits"
               >
-                Why University of Wisconsin AI Tutors
+                Why University of Notre Dame AI Tutors
               </Button>
               <Button 
                 variant="ghost" 
@@ -83,7 +83,7 @@ export default function SupportPage() {
               Support Center
             </h1>
             <p className="text-xl text-muted-foreground">
-              We're here to help you get the most out of University of Wisconsin AI Tutor
+              We're here to help you get the most out of University of Notre Dame AI Tutor
             </p>
           </div>
 

@@ -5,7 +5,7 @@ import { ProgressRing } from "@/components/progress-ring";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLocation } from "wouter";
-import suLogo from '@/assets/uw-madison-logo.png';
+import ndLogo from '@/assets/notre-dame-logo.png';
 
 export default function HomePage() {
   const { user } = useAuth();
@@ -59,8 +59,8 @@ export default function HomePage() {
           <div className="bg-gradient-to-r from-primary to-primary/80 rounded-xl p-8 text-white">
             <div className="flex items-center gap-4 mb-4">
               <img 
-                src={suLogo} 
-                alt="University of Wisconsin AI Tutor Logo" 
+                src={ndLogo} 
+                alt="University of Notre Dame AI Tutor Logo" 
                 className="h-12 w-auto"
               />
               <div>
@@ -72,7 +72,7 @@ export default function HomePage() {
                     Patent Pending
                   </span>
                 </div>
-                <p className="text-primary-foreground/90 text-lg">Ready to master your subjects with University of Wisconsin AI Tutor?</p>
+                <p className="text-primary-foreground/90 text-lg">Ready to master your subjects with University of Notre Dame AI Tutor?</p>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 /**
- * Upcoming-Work Digest Job (JIE UW Tutor — Student SRM)
+ * Upcoming-Work Digest Job (JIE Notre Dame Tutor — Student SRM)
  * -----------------------------------------------------
  * Sends opt-in reminder emails summarizing upcoming assignments / tests /
  * quizzes for a college student over a configurable horizon (default 7 days).
@@ -28,7 +28,7 @@ const emailService = new EmailService();
 interface PrefRow {
   id: string;
   user_id: string;
-  child_id: string | null; // always null on UW
+  child_id: string | null; // always null on Notre Dame
   recipient_email: string;
   recipient_name: string | null;
   recipient_role: 'self' | 'parent' | 'admin';
@@ -270,8 +270,8 @@ function renderDigestEmail(params: {
 
   const html = `
   <div style="font-family:'Segoe UI',system-ui,-apple-system,sans-serif;max-width:600px;margin:0 auto;padding:24px;background:#f7f7f9;">
-    <div style="background:#282728;padding:20px;border-radius:8px 8px 0 0;border-bottom:4px solid #C5050C;">
-      <h1 style="color:#fff;margin:0;font-size:20px;">UW AI Tutor · Upcoming Work</h1>
+    <div style="background:#0C2340;padding:20px;border-radius:8px 8px 0 0;border-bottom:4px solid #0C2340;">
+      <h1 style="color:#fff;margin:0;font-size:20px;">Notre Dame AI Tutor · Upcoming Work</h1>
       <div style="color:#bbb;font-size:13px;margin-top:4px;">
         ${frequency === 'daily' ? 'Daily digest' : 'Weekly digest'} · next ${horizonDays} day${horizonDays === 1 ? '' : 's'}
       </div>
@@ -288,7 +288,7 @@ function renderDigestEmail(params: {
 
       <div style="margin-top:24px;text-align:center;">
         <a href="${settingsUrl}"
-           style="display:inline-block;background:#C5050C;color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:600;font-size:14px;">
+           style="display:inline-block;background:#0C2340;color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:600;font-size:14px;">
           Open Academic Dashboard
         </a>
       </div>
@@ -318,7 +318,7 @@ function renderAtRiskEmail(params: {
   const html = `
   <div style="font-family:'Segoe UI',system-ui,-apple-system,sans-serif;max-width:600px;margin:0 auto;padding:24px;background:#fff5f5;">
     <div style="background:#b00020;padding:20px;border-radius:8px 8px 0 0;">
-      <h1 style="color:#fff;margin:0;font-size:20px;">UW AI Tutor · Heads-Up Alert</h1>
+      <h1 style="color:#fff;margin:0;font-size:20px;">Notre Dame AI Tutor · Heads-Up Alert</h1>
     </div>
     <div style="background:#fff;padding:20px;border-radius:0 0 8px 8px;">
       <p style="color:#222;font-size:15px;">

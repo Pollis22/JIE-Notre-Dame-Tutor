@@ -31,7 +31,7 @@ export const themes: Record<AgeGroup, Theme> = {
   'K-2': {
     name: 'Playful',
     id: 'playful',
-    primary: '#FF6B6B',
+    primary: '#E8B84A',
     secondary: '#4ECDC4',
     accent: '#FFE66D',
     background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',

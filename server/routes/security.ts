@@ -333,14 +333,14 @@ router.post('/reset-password', async (req: Request, res: Response) => {
     try {
       await emailService.sendEmail({
         to: user.email,
-        subject: 'Your Password Has Been Reset - University of Wisconsin AI Tutor',
+        subject: 'Your Password Has Been Reset - University of Notre Dame AI Tutor',
         html: `
           <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <h2 style="color: #16a34a;">Password Changed Successfully</h2>
             <p>Hi ${user.firstName || 'there'},</p>
             <p>Your password was successfully reset.</p>
-            <p>If you did not make this change, please contact us immediately at support@stateuniversity-tutor.ai</p>
-            <p style="margin-top: 30px; color: #666;">The University of Wisconsin AI Tutor Team</p>
+            <p>If you did not make this change, please contact us immediately at support@notredame-tutor.jiemastery.ai</p>
+            <p style="margin-top: 30px; color: #666;">The Notre Dame AI Tutor Team</p>
           </div>
         `,
         text: `Your password was successfully reset. If you didn't do this, contact support immediately.`
@@ -428,18 +428,18 @@ router.post('/user/change-email', async (req: Request, res: Response) => {
     try {
       await emailService.sendEmail({
         to: oldEmail,
-        subject: 'Your University of Wisconsin AI Tutor Email Was Changed',
+        subject: 'Your Notre Dame AI Tutor Email Was Changed',
         html: `
           <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #dc2626;">Email Address Changed</h2>
+            <h2 style="color: #0C2340;">Email Address Changed</h2>
             <p>Hi ${user.firstName || 'there'},</p>
-            <p>Your University of Wisconsin AI Tutor account email was just changed from <strong>${oldEmail}</strong> to <strong>${normalizedEmail}</strong>.</p>
+            <p>Your Notre Dame AI Tutor account email was just changed from <strong>${oldEmail}</strong> to <strong>${normalizedEmail}</strong>.</p>
             <p>If you made this change, no action is needed.</p>
-            <p><strong>If you did NOT make this change</strong>, please contact us immediately at support@stateuniversity-tutor.ai</p>
-            <p style="margin-top: 30px; color: #666;">The University of Wisconsin AI Tutor Team</p>
+            <p><strong>If you did NOT make this change</strong>, please contact us immediately at support@notredame-tutor.jiemastery.ai</p>
+            <p style="margin-top: 30px; color: #666;">The Notre Dame AI Tutor Team</p>
           </div>
         `,
-        text: `Your email was changed from ${oldEmail} to ${normalizedEmail}. If you didn't do this, contact support@stateuniversity-tutor.ai immediately.`
+        text: `Your email was changed from ${oldEmail} to ${normalizedEmail}. If you didn't do this, contact support@notredame-tutor.jiemastery.ai immediately.`
       });
     } catch (emailError) {
       console.error('[Account] Failed to send email change notification:', emailError);
@@ -474,14 +474,14 @@ router.post('/forgot-email', async (req: Request, res: Response) => {
     if (users.length === 0) {
       return res.json({
         success: false,
-        message: 'No account found with that name. Please contact support@stateuniversity-tutor.ai for help.'
+        message: 'No account found with that name. Please contact support@notredame-tutor.jiemastery.ai for help.'
       });
     }
 
     if (users.length > 1) {
       return res.json({
         success: false,
-        message: 'Multiple accounts found. Please contact support@stateuniversity-tutor.ai for help.'
+        message: 'Multiple accounts found. Please contact support@notredame-tutor.jiemastery.ai for help.'
       });
     }
 

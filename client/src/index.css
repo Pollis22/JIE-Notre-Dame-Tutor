@@ -269,9 +269,9 @@ li[data-sonner-toast] {
 .destructive,
 li[data-sonner-toast].destructive,
 [role="alert"].destructive {
-  background-color: #DC2626 !important;
+  background-color: #0C2340 !important;
   color: #FFFFFF !important;
-  border-color: #991B1B !important;
+  border-color: #0a1a30 !important;
   font-weight: 700 !important;
 }
 
@@ -304,7 +304,7 @@ li[data-sonner-toast] * {
 
 /* ============================================================
    MOBILE RESPONSIVE GLOBAL — v1 (Apr 27, 2026)
-   Applies to all JIE platforms (Mastery / UW / State / USC / Mobile)
+   Applies to all JIE platforms (Mastery / Notre Dame / State / USC / Mobile)
    Marker: JIE_MOBILE_RESPONSIVE_V1
    Idempotent: deploy script checks for this marker before appending.
    ============================================================ */

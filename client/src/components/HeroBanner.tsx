@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
-import uwLogo from "@/assets/uw-madison-logo.png";
-import buckyClassroom from "@/assets/campus/bucky-classroom.png";
-import buckyLecture from "@/assets/campus/bucky-lecture.png";
-import buckyGraduation from "@/assets/campus/bucky-graduation.png";
-import bascomHall from "@/assets/campus/bascom-hall.png";
-import buckyBasketball from "@/assets/campus/bucky-basketball.png";
-import buckyFootball from "@/assets/campus/bucky-football.png";
-import studentLibrary from "@/assets/campus/student-library.png";
-import memorialUnion from "@/assets/campus/memorial-union.png";
+import ndLogo from "@/assets/notre-dame-logo.png";
+import ndClassroom from "@/assets/campus/nd-classroom.png";
+import goldenDomeCloseup from "@/assets/campus/golden-dome-closeup.png";
+import ndGraduation from "@/assets/campus/nd-graduation.png";
+import goldenDome from "@/assets/campus/golden-dome.png";
+import leprechaunStatue from "@/assets/campus/leprechaun-statue.png";
+import irishFans from "@/assets/campus/irish-fans.png";
+import touchdownJesus from "@/assets/campus/touchdown-jesus.png";
+import hesburghReflection from "@/assets/campus/hesburgh-reflection.png";
 
-// Brand colors
-const UW_RED   = "#C5050C";
-const UW_DARK  = "#9B0000";
-const UW_NAVY  = "#1e2a47";
-const UW_INK   = "#0a2240";
+// Notre Dame brand colors
+const ND_BLUE  = "#0C2340";   // Notre Dame Blue (PMS 289)
+const ND_GOLD  = "#C99700";   // Standard Dome Gold (PMS 117)
+const ND_NAVY  = "#1e2a47";   // deeper navy variant for gradients
+const ND_INK   = "#0a2240";   // near-black ink variant
 
 const STATS = [
   { value: "Academic SRM", label: "+ AI Tutor" },
@@ -37,64 +37,64 @@ export function HeroBanner({ mounted = false }: Props) {
   const [activeSlide, setActiveSlide] = useState(0);
   const [tick, setTick]               = useState(0);
 
-  // SRM-first messaging — 8 rotating slides, UW Badger imagery throughout.
+  // SRM-first messaging — 8 rotating slides, Notre Dame Fighting Irish imagery throughout.
   // Each slide carries its own objectPosition so faces/heads stay in frame
   // when the image is cropped into the wide slideshow container.
   const slides = [
     {
-      image:    studentLibrary,
+      image:    touchdownJesus,
       headline: "Your Academic Command Center",
-      sub:      "Student Relationship Manager + AI Tutor, built for Badgers",
-      accent:   UW_INK,
+      sub:      "Student Relationship Manager + AI Tutor, built for Fighting Irish",
+      accent:   ND_INK,
       position: "center 25%",
     },
     {
-      image:    bascomHall,
+      image:    goldenDome,
       headline: "One System. Every Course. Every Deadline.",
       sub:      "Syllabus → calendar → study tasks → tutor — automatically",
-      accent:   UW_NAVY,
+      accent:   ND_NAVY,
       position: "center 55%",
     },
     {
-      image:    buckyGraduation,
+      image:    ndGraduation,
       headline: "Stay Ahead, All the Way to the Podium",
       sub:      "Engagement scoring and early alerts keep you on track",
-      accent:   UW_DARK,
+      accent:   ND_BLUE,
       position: "center 30%",
     },
     {
-      image:    buckyClassroom,
+      image:    ndClassroom,
       headline: "A Tutor That Knows Your Semester",
       sub:      "Every session opens already knowing what's due next",
-      accent:   UW_DARK,
+      accent:   ND_BLUE,
       position: "center 35%",
     },
     {
-      image:    buckyLecture,
+      image:    goldenDomeCloseup,
       headline: "Learn at Your Own Pace",
       sub:      "Adaptive instruction across every course and subject",
-      accent:   UW_INK,
+      accent:   ND_INK,
       position: "center 35%",
     },
     {
-      image:    memorialUnion,
-      headline: "From Bascom to the Terrace",
+      image:    hesburghReflection,
+      headline: "From the Golden Dome to the Hesburgh Library",
       sub:      "Study anywhere — voice, text, any device",
-      accent:   UW_NAVY,
+      accent:   ND_NAVY,
       position: "center center",
     },
     {
-      image:    buckyBasketball,
+      image:    leprechaunStatue,
       headline: "Built for Student-Athletes",
       sub:      "Travel-ready tutoring with eligibility-protecting alerts",
-      accent:   UW_DARK,
+      accent:   ND_BLUE,
       position: "center 25%",
     },
     {
-      image:    buckyFootball,
-      headline: "On Wisconsin.",
-      sub:      "Academic support built for University of Wisconsin students",
-      accent:   UW_RED,
+      image:    irishFans,
+      headline: "Go Irish.",
+      sub:      "Academic support built for University of Notre Dame students",
+      accent:   ND_BLUE,
       position: "center 25%",
     },
   ];
@@ -151,8 +151,8 @@ export function HeroBanner({ mounted = false }: Props) {
                 className="inline-flex items-center gap-2 mb-2 px-2 py-0.5 rounded-full w-fit"
                 style={{ background: "rgba(255,255,255,0.18)", backdropFilter: "blur(6px)" }}
               >
-                <img src={uwLogo} alt="" className="h-5 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
-                <span className="text-white text-xs font-bold tracking-widest uppercase">University of Wisconsin</span>
+                <img src={ndLogo} alt="" className="h-5 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
+                <span className="text-white text-xs font-bold tracking-widest uppercase">University of Notre Dame</span>
               </div>
               <h2
                 className="text-white font-black leading-tight mb-1"
@@ -191,7 +191,7 @@ export function HeroBanner({ mounted = false }: Props) {
       {/* ── Stats Strip ────────────────────────────────────── */}
       <div
         className="grid grid-cols-4 w-full"
-        style={{ background: `linear-gradient(90deg, ${UW_RED} 0%, ${UW_DARK} 100%)` }}
+        style={{ background: `linear-gradient(90deg, ${ND_BLUE} 0%, ${ND_NAVY} 100%)` }}
       >
         {STATS.map((stat, i) => (
           <div
@@ -212,9 +212,9 @@ export function HeroBanner({ mounted = false }: Props) {
       {/* ── Course Ticker ──────────────────────────────────── */}
       <div
         className="flex items-center gap-0 w-full overflow-hidden"
-        style={{ background: UW_NAVY, borderRadius: "0 0 16px 16px", padding: "7px 16px" }}
+        style={{ background: ND_NAVY, borderRadius: "0 0 16px 16px", padding: "7px 16px" }}
       >
-        <span className="text-xs font-bold uppercase tracking-widest mr-3 shrink-0" style={{ color: UW_RED }}>
+        <span className="text-xs font-bold uppercase tracking-widest mr-3 shrink-0" style={{ color: ND_GOLD }}>
           Courses
         </span>
         <div className="flex gap-2 overflow-hidden flex-1">
@@ -226,7 +226,7 @@ export function HeroBanner({ mounted = false }: Props) {
                 key={course}
                 className="text-xs font-semibold whitespace-nowrap transition-all duration-500 px-2 py-0.5 rounded-full shrink-0"
                 style={{
-                  background: isActive ? UW_RED : isNear ? "rgba(197,5,12,0.18)" : "transparent",
+                  background: isActive ? ND_BLUE : isNear ? "rgba(12,35,64,0.18)" : "transparent",
                   color:      isActive ? "white" : isNear ? "rgba(255,255,255,0.8)" : "rgba(255,255,255,0.32)",
                   transform:  isActive ? "scale(1.1)" : "scale(1)",
                 }}

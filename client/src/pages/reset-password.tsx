@@ -8,7 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import suLogo from '@/assets/uw-madison-logo.png';
+import ndLogo from '@/assets/notre-dame-logo.png';
 import { Lock, Eye, EyeOff, CheckCircle } from "lucide-react";
 
 const resetPasswordSchema = z.object({
@@ -99,7 +99,7 @@ export default function ResetPasswordPage() {
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <div className="w-full max-w-md space-y-4">
         <div className="flex justify-center mb-6">
-          <img src={suLogo} alt="University of Wisconsin AI Tutor" className="h-12 w-auto" data-testid="img-logo" />
+          <img src={ndLogo} alt="Notre Dame AI Tutor" className="h-12 w-auto" data-testid="img-logo" />
         </div>
 
         <Card data-testid="card-reset-password">

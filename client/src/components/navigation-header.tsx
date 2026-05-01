@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { UserAvatar } from "@/components/UserAvatar";
 import { Menu, X } from "lucide-react";
-import uwLogo from "@/assets/uw-madison-logo.png";
+import ndLogo from "@/assets/notre-dame-logo.png";
 
 export function NavigationHeader() {
   const { user, logoutMutation } = useAuth();
@@ -74,15 +74,15 @@ export function NavigationHeader() {
   return (
     <nav style={{ background: "#FFFFFF", borderBottom: "1px solid #E8E8E8", position: "sticky", top: 0, zIndex: 50 }}>
       {/* Cardinal red top bar */}
-      <div style={{ height: 4, background: "#C5050C" }} />
+      <div style={{ height: 4, background: "#0C2340" }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 gap-3">
           {/* Logo */}
           <div className="flex items-center gap-3 cursor-pointer flex-shrink-0" onClick={() => setLocation("/tutor")}>
-            <img src={uwLogo} alt="University of Wisconsin–Madison" style={{ height: 44 }} />
+            <img src={ndLogo} alt="University of Notre Dame" style={{ height: 44 }} />
             <div className="hidden sm:block" style={{ borderLeft: "1px solid #DAD7CB", paddingLeft: 12 }}>
-              <div style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: 15, color: "#282728", lineHeight: 1.1, whiteSpace: "nowrap" }}>AI Tutor</div>
-              <div style={{ fontSize: 9, color: "#646569", fontWeight: 500, letterSpacing: 1, textTransform: "uppercase", whiteSpace: "nowrap" }}>University of Wisconsin</div>
+              <div style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: 15, color: "#0C2340", lineHeight: 1.1, whiteSpace: "nowrap" }}>AI Tutor</div>
+              <div style={{ fontSize: 9, color: "#C99700", fontWeight: 500, letterSpacing: 1, textTransform: "uppercase", whiteSpace: "nowrap" }}>University of Notre Dame</div>
             </div>
           </div>
 
@@ -97,8 +97,8 @@ export function NavigationHeader() {
                   borderRadius: 6,
                   fontSize: 13,
                   fontWeight: isActive(item.path) ? 600 : 500,
-                  color: isActive(item.path) ? "#C5050C" : "#646569",
-                  background: isActive(item.path) ? "rgba(197,5,12,0.06)" : "transparent",
+                  color: isActive(item.path) ? "#0C2340" : "#C99700",
+                  background: isActive(item.path) ? "rgba(12, 35, 64,0.06)" : "transparent",
                   border: "none",
                   cursor: "pointer",
                   fontFamily: "'Red Hat Text', sans-serif",
@@ -118,7 +118,7 @@ export function NavigationHeader() {
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="flex items-center gap-2 px-2">
                   <UserAvatar name={displayName} size="sm" />
-                  <span className="hidden md:inline text-sm font-medium whitespace-nowrap max-w-[120px] truncate" style={{ color: "#282728" }}>{displayName}</span>
+                  <span className="hidden md:inline text-sm font-medium whitespace-nowrap max-w-[120px] truncate" style={{ color: "#0C2340" }}>{displayName}</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-48">
@@ -146,7 +146,7 @@ export function NavigationHeader() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               style={{ border: "1px solid #E8E8E8", background: "transparent" }}
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" style={{ color: "#282728" }} /> : <Menu className="w-5 h-5" style={{ color: "#282728" }} />}
+              {mobileMenuOpen ? <X className="w-5 h-5" style={{ color: "#0C2340" }} /> : <Menu className="w-5 h-5" style={{ color: "#0C2340" }} />}
             </button>
           </div>
         </div>
@@ -168,8 +168,8 @@ export function NavigationHeader() {
                   borderRadius: 6,
                   fontSize: 15,
                   fontWeight: isActive(item.path) ? 600 : 500,
-                  color: isActive(item.path) ? "#C5050C" : "#282728",
-                  background: isActive(item.path) ? "rgba(197,5,12,0.06)" : "transparent",
+                  color: isActive(item.path) ? "#0C2340" : "#0C2340",
+                  background: isActive(item.path) ? "rgba(12, 35, 64,0.06)" : "transparent",
                   border: "none",
                   cursor: "pointer",
                   fontFamily: "'Red Hat Text', sans-serif",
@@ -189,7 +189,7 @@ export function NavigationHeader() {
                   borderRadius: 6,
                   fontSize: 15,
                   fontWeight: 500,
-                  color: "#C5050C",
+                  color: "#0C2340",
                   background: "transparent",
                   border: "none",
                   cursor: "pointer",

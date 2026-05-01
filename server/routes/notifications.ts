@@ -1,5 +1,5 @@
 /**
- * Notifications API — Preferences CRUD + preview + unsubscribe (UW AI Tutor)
+ * Notifications API — Preferences CRUD + preview + unsubscribe (Notre Dame AI Tutor)
  * -----------------------------------------------------------------------------
  * Mounted at /api/notifications. Single-student model (no childId concept).
  *
@@ -215,7 +215,7 @@ function unsubHtmlPage(message: string, success: boolean): string {
     <div style="width:48px;height:48px;border-radius:50%;background:${color};margin:0 auto 16px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;">
       ${success ? '✓' : '!'}
     </div>
-    <h1 style="color:#222;font-size:20px;margin:0 0 8px;">UW AI Tutor Notifications</h1>
+    <h1 style="color:#222;font-size:20px;margin:0 0 8px;">Notre Dame AI Tutor Notifications</h1>
     <p style="color:#555;">${message}</p>
   </div>
 </body></html>`;

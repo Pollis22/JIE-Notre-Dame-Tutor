@@ -21,7 +21,7 @@ export default function BestPractices() {
       <NavigationHeader />
 
       {/* Header */}
-      <div className="bg-[#C5050C] text-white py-16">
+      <div className="bg-[#0C2340] text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
             Best Practices for Success
@@ -36,14 +36,14 @@ export default function BestPractices() {
         
         {/* Optimal Environment */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-[#C5050C] mb-8" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
+          <h2 className="text-3xl font-bold text-[#0C2340] mb-8" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
             Setting Up Your Study Environment
           </h2>
 
           <div className="space-y-6">
             <div className="flex gap-4 bg-gray-50 p-6 rounded-lg">
               <div className="flex-shrink-0">
-                <Volume2 className="w-8 h-8 text-[#C5050C]" />
+                <Volume2 className="w-8 h-8 text-[#0C2340]" />
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-2">Find a Quiet Space</h3>
@@ -58,7 +58,7 @@ export default function BestPractices() {
 
             <div className="flex gap-4 bg-gray-50 p-6 rounded-lg">
               <div className="flex-shrink-0">
-                <Monitor className="w-8 h-8 text-[#C5050C]" />
+                <Monitor className="w-8 h-8 text-[#0C2340]" />
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-2">Use a Laptop or Desktop</h3>
@@ -73,7 +73,7 @@ export default function BestPractices() {
 
             <div className="flex gap-4 bg-gray-50 p-6 rounded-lg">
               <div className="flex-shrink-0">
-                <Headphones className="w-8 h-8 text-[#C5050C]" />
+                <Headphones className="w-8 h-8 text-[#0C2340]" />
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-2">Quality Audio Matters</h3>
@@ -85,7 +85,7 @@ export default function BestPractices() {
 
             <div className="flex gap-4 bg-gray-50 p-6 rounded-lg">
               <div className="flex-shrink-0">
-                <Wifi className="w-8 h-8 text-[#C5050C]" />
+                <Wifi className="w-8 h-8 text-[#0C2340]" />
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-2">Stable Internet Connection</h3>
@@ -99,14 +99,14 @@ export default function BestPractices() {
 
         {/* Voice vs Text Mode */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-[#C5050C] mb-8" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
+          <h2 className="text-3xl font-bold text-[#0C2340] mb-8" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
             Voice Mode vs. Text Mode
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="border-2 border-[#C5050C] rounded-lg p-6">
+            <div className="border-2 border-[#0C2340] rounded-lg p-6">
               <div className="flex items-center gap-3 mb-4">
-                <MessageSquare className="w-8 h-8 text-[#C5050C]" />
+                <MessageSquare className="w-8 h-8 text-[#0C2340]" />
                 <h3 className="text-2xl font-bold">Voice Mode</h3>
               </div>
               
@@ -176,14 +176,14 @@ export default function BestPractices() {
 
         {/* Effective Communication */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-[#C5050C] mb-8" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
+          <h2 className="text-3xl font-bold text-[#0C2340] mb-8" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
             Communicating Effectively with Your AI Tutor
           </h2>
 
           <div className="space-y-6">
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Lightbulb className="w-6 h-6 text-[#C5050C]" />
+                <Lightbulb className="w-6 h-6 text-[#0C2340]" />
                 Be Specific About Your Needs
               </h3>
               <div className="grid md:grid-cols-2 gap-6 mt-4">
@@ -249,13 +249,13 @@ export default function BestPractices() {
 
         {/* Study Strategies */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-[#C5050C] mb-8" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
+          <h2 className="text-3xl font-bold text-[#0C2340] mb-8" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
             Study Strategies That Work
           </h2>
 
           <div className="space-y-4">
             <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
-              <div className="flex-shrink-0 w-8 h-8 bg-[#C5050C] text-white rounded-full flex items-center justify-center font-bold">
+              <div className="flex-shrink-0 w-8 h-8 bg-[#0C2340] text-white rounded-full flex items-center justify-center font-bold">
                 1
               </div>
               <div>
@@ -265,7 +265,7 @@ export default function BestPractices() {
             </div>
 
             <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
-              <div className="flex-shrink-0 w-8 h-8 bg-[#C5050C] text-white rounded-full flex items-center justify-center font-bold">
+              <div className="flex-shrink-0 w-8 h-8 bg-[#0C2340] text-white rounded-full flex items-center justify-center font-bold">
                 2
               </div>
               <div>
@@ -275,7 +275,7 @@ export default function BestPractices() {
             </div>
 
             <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
-              <div className="flex-shrink-0 w-8 h-8 bg-[#C5050C] text-white rounded-full flex items-center justify-center font-bold">
+              <div className="flex-shrink-0 w-8 h-8 bg-[#0C2340] text-white rounded-full flex items-center justify-center font-bold">
                 3
               </div>
               <div>
@@ -285,7 +285,7 @@ export default function BestPractices() {
             </div>
 
             <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
-              <div className="flex-shrink-0 w-8 h-8 bg-[#C5050C] text-white rounded-full flex items-center justify-center font-bold">
+              <div className="flex-shrink-0 w-8 h-8 bg-[#0C2340] text-white rounded-full flex items-center justify-center font-bold">
                 4
               </div>
               <div>
@@ -295,7 +295,7 @@ export default function BestPractices() {
             </div>
 
             <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
-              <div className="flex-shrink-0 w-8 h-8 bg-[#C5050C] text-white rounded-full flex items-center justify-center font-bold">
+              <div className="flex-shrink-0 w-8 h-8 bg-[#0C2340] text-white rounded-full flex items-center justify-center font-bold">
                 5
               </div>
               <div>
@@ -307,7 +307,7 @@ export default function BestPractices() {
         </section>
 
         {/* Multilingual Support */}
-        <section className="mb-16 bg-gradient-to-r from-[#C5050C] to-[#A00409] text-white p-8 rounded-lg">
+        <section className="mb-16 bg-gradient-to-r from-[#0C2340] to-[#A00409] text-white p-8 rounded-lg">
           <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
             Learn in Your Preferred Language
           </h2>
@@ -321,7 +321,7 @@ export default function BestPractices() {
 
         {/* Getting Help */}
         <section>
-          <h2 className="text-3xl font-bold text-[#C5050C] mb-8" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
+          <h2 className="text-3xl font-bold text-[#0C2340] mb-8" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
             Need Additional Help?
           </h2>
           <div className="bg-gray-50 p-8 rounded-lg text-center">
@@ -330,7 +330,7 @@ export default function BestPractices() {
             </p>
             <button
               onClick={() => setLocation("/support")}
-              className="bg-[#C5050C] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#A00409] transition-colors"
+              className="bg-[#0C2340] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#A00409] transition-colors"
             >
               Contact Live Support
             </button>

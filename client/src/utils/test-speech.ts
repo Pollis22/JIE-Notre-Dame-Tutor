@@ -293,7 +293,7 @@ export class TestSpeechRecognition {
         <strong>⚠️ Error:</strong> ${error}
       </div>
     `;
-    message.style.cssText = 'position: fixed; bottom: 20px; left: 20px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; padding: 15px 20px; border-radius: 12px; max-width: 500px; z-index: 9999; box-shadow: 0 4px 15px rgba(0,0,0,0.2); animation: slideIn 0.3s ease-out; font-size: 14px; line-height: 1.5;';
+    message.style.cssText = 'position: fixed; bottom: 20px; left: 20px; background: linear-gradient(135deg, #ef4444 0%, #0C2340 100%); color: white; padding: 15px 20px; border-radius: 12px; max-width: 500px; z-index: 9999; box-shadow: 0 4px 15px rgba(0,0,0,0.2); animation: slideIn 0.3s ease-out; font-size: 14px; line-height: 1.5;';
     document.body.appendChild(message);
     
     // Auto-remove after delay

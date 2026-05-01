@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import suLogo from "@/assets/uw-madison-logo.png";
-import buckyClassroom from "@/assets/campus/bucky-classroom.png";
-import buckyLecture from "@/assets/campus/bucky-lecture.png";
-import studentLibrary from "@/assets/campus/student-library.png";
-import bascomHall from "@/assets/campus/bascom-hall.png";
+import ndLogo from "@/assets/notre-dame-logo.png";
+import ndClassroom from "@/assets/campus/nd-classroom.png";
+import goldenDomeCloseup from "@/assets/campus/golden-dome-closeup.png";
+import touchdownJesus from "@/assets/campus/touchdown-jesus.png";
+import goldenDome from "@/assets/campus/golden-dome.png";
 
 const TIPS = [
   { icon: "🎯", text: "Speak clearly and take your time — your tutor is listening carefully." },
@@ -18,14 +18,14 @@ const TIPS = [
 ];
 
 const GALLERY = [
-  { src: buckyClassroom, caption: "Learning at University of Wisconsin" },
-  { src: buckyLecture, caption: "Expert instruction, your schedule" },
-  { src: studentLibrary, caption: "Study smarter, not harder" },
-  { src: bascomHall, caption: "Campus pride, academic excellence" },
+  { src: ndClassroom, caption: "Learning at University of Notre Dame" },
+  { src: goldenDomeCloseup, caption: "Expert instruction, your schedule" },
+  { src: touchdownJesus, caption: "Study smarter, not harder" },
+  { src: goldenDome, caption: "Campus pride, academic excellence" },
 ];
 
-// Brand crimson
-const UW_RED = "#C5050C";
+// Notre Dame Blue (PMS 289)
+const ND_BLUE = "#0C2340";
 
 interface Props {
   isSpeaking?: boolean;
@@ -113,12 +113,12 @@ export function TutorSessionAmbient({ isSpeaking = false, isConnected = false, h
       >
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
           <img
-            src={suLogo}
-            alt="University of Wisconsin"
+            src={ndLogo}
+            alt="University of Notre Dame"
             style={{
               width: 140,
               height: "auto",
-              filter: "drop-shadow(0 4px 16px rgba(197,5,12,0.25))",
+              filter: "drop-shadow(0 4px 16px rgba(12, 35, 64,0.25))",
               transform: showLogoFlash ? "scale(1.04)" : "scale(0.95)",
               transition: "transform 0.45s ease",
             }}
@@ -129,12 +129,12 @@ export function TutorSessionAmbient({ isSpeaking = false, isConnected = false, h
               fontStyle: "italic",
               fontWeight: "bold",
               fontSize: 16,
-              color: UW_RED,
+              color: ND_BLUE,
               letterSpacing: "0.04em",
               opacity: 0.9,
             }}
           >
-            University of Wisconsin
+            University of Notre Dame
           </span>
         </div>
       </div>
@@ -152,7 +152,7 @@ export function TutorSessionAmbient({ isSpeaking = false, isConnected = false, h
               style={{
                 width: 72,
                 height: 72,
-                border: `2px solid ${UW_RED}`,
+                border: `2px solid ${ND_BLUE}`,
                 opacity: 0,
                 animation: "uwPulse 1.2s ease-out forwards",
               }}
@@ -163,12 +163,12 @@ export function TutorSessionAmbient({ isSpeaking = false, isConnected = false, h
             style={{
               width: 64,
               height: 64,
-              background: `radial-gradient(circle at 35% 35%, white 0%, rgba(197,5,12,0.15) 60%, rgba(197,5,12,0.35) 100%)`,
-              boxShadow: `0 0 0 3px rgba(197,5,12,0.12), 0 4px 20px rgba(197,5,12,0.2)`,
-              border: `2px solid rgba(197,5,12,0.2)`,
+              background: `radial-gradient(circle at 35% 35%, white 0%, rgba(12, 35, 64,0.15) 60%, rgba(12, 35, 64,0.35) 100%)`,
+              boxShadow: `0 0 0 3px rgba(12, 35, 64,0.12), 0 4px 20px rgba(12, 35, 64,0.2)`,
+              border: `2px solid rgba(12, 35, 64,0.2)`,
             }}
           >
-            <img src={suLogo} alt="University of Wisconsin" style={{ width: 44, height: "auto", objectFit: "contain" }} />
+            <img src={ndLogo} alt="University of Notre Dame" style={{ width: 44, height: "auto", objectFit: "contain" }} />
           </div>
         </div>
 
@@ -181,7 +181,7 @@ export function TutorSessionAmbient({ isSpeaking = false, isConnected = false, h
                 style={{
                   width: 4,
                   borderRadius: 2,
-                  background: UW_RED,
+                  background: ND_BLUE,
                   animation: `soundBar 0.45s ease-in-out infinite`,
                   animationDelay: `${i * 0.09}s`,
                   height: h,
@@ -196,9 +196,9 @@ export function TutorSessionAmbient({ isSpeaking = false, isConnected = false, h
       <div
         className="rounded-full px-3 py-1 text-xs font-semibold tracking-wide"
         style={{
-          background: isConnected ? "rgba(197,5,12,0.1)" : "rgba(100,100,120,0.08)",
-          color: isConnected ? UW_RED : "#888",
-          border: `1px solid ${isConnected ? "rgba(197,5,12,0.2)" : "rgba(100,100,120,0.15)"}`,
+          background: isConnected ? "rgba(12, 35, 64,0.1)" : "rgba(100,100,120,0.08)",
+          color: isConnected ? ND_BLUE : "#888",
+          border: `1px solid ${isConnected ? "rgba(12, 35, 64,0.2)" : "rgba(100,100,120,0.15)"}`,
           opacity: showLogoFlash ? 0 : 1,
           transition: "opacity 0.4s ease",
         }}
@@ -240,8 +240,8 @@ export function TutorSessionAmbient({ isSpeaking = false, isConnected = false, h
         style={{
           maxWidth: 340,
           background: "rgba(255,255,255,0.88)",
-          border: "1px solid rgba(197,5,12,0.12)",
-          boxShadow: "0 2px 12px rgba(197,5,12,0.06)",
+          border: "1px solid rgba(12, 35, 64,0.12)",
+          boxShadow: "0 2px 12px rgba(12, 35, 64,0.06)",
           opacity: visible ? 1 : 0,
           transform: visible ? "translateY(0)" : "translateY(6px)",
           transition: "opacity 0.35s ease, transform 0.35s ease",

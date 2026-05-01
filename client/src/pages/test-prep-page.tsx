@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLocation } from "wouter";
 import { PublicMobileMenu } from "@/components/PublicMobileMenu";
-import suLogo from "@/assets/uw-madison-logo.png";
+import ndLogo from "@/assets/notre-dame-logo.png";
 import {
   GraduationCap,
   BookOpen,
@@ -24,13 +24,6 @@ import {
 // ─── Exam Coverage ───────────────────────────────────────────────────────────
 
 const EXAM_CATEGORIES = [
-  {
-    title: "College Admissions",
-    exams: [
-      { name: "SAT", icon: "📝", description: "Reading/Writing + Math — Digital adaptive format" },
-      { name: "ACT", icon: "📝", description: "English, Math, Reading, Science — Speed-focused" },
-    ],
-  },
   {
     title: "Graduate Admissions",
     exams: [
@@ -87,7 +80,7 @@ const HOW_IT_WORKS_STEPS = [
 ];
 
 const WHAT_IT_IS = [
-  "An AI tutor that knows the structure, timing, and strategy for 18 major exams",
+  "An AI tutor that knows the structure, timing, and strategy for 16 major exams",
   "Direct teaching — explains techniques and methods clearly, then lets you practice",
   "Practice Mode that drills you with exam-style questions and tracks your progress",
   "Study guides with strategy overviews and practice question walkthroughs",
@@ -131,8 +124,8 @@ export default function TestPrepPage() {
               className="flex items-center space-x-3 cursor-pointer"
               onClick={() => setLocation("/")}
             >
-              <img src={suLogo} alt="University of Wisconsin" className="h-12 w-auto" />
-              <span className="text-xl font-bold text-foreground">University of Wisconsin AI Tutor</span>
+              <img src={ndLogo} alt="University of Notre Dame" className="h-12 w-auto" />
+              <span className="text-xl font-bold text-foreground">University of Notre Dame AI Tutor</span>
             </div>
             <div className="hidden md:flex items-center space-x-6">
               {[
@@ -178,7 +171,7 @@ export default function TestPrepPage() {
             Your AI Test Prep Coach
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Direct teaching, exam-specific strategy, and structured practice for 18 major exams — from SAT to CPA. 
+            Direct teaching, exam-specific strategy, and structured practice for 16 graduate-admissions and professional-certification exams — from GRE to CPA. 
             No Socratic questioning. Just clear explanations and real practice.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -229,7 +222,7 @@ export default function TestPrepPage() {
                 </ul>
                 <div className="mt-4 p-3 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
                   <p className="text-xs text-amber-700 dark:text-amber-300">
-                    <strong>Our recommendation:</strong> Use University of Wisconsin AI Tutor as a supplement to your primary study plan. 
+                    <strong>Our recommendation:</strong> Use University of Notre Dame AI Tutor as a supplement to your primary study plan. 
                     It is most effective for concept review, strategy coaching, and practice drilling — especially 
                     when you are stuck on a specific topic or want extra reps before test day.
                   </p>
@@ -414,7 +407,7 @@ export default function TestPrepPage() {
             Start Preparing Today
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-            Your exam is not going to wait. Start preparing with your University of Wisconsin AI Tutor today.
+            Your exam is not going to wait. Start preparing with your University of Notre Dame AI Tutor today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" onClick={() => setLocation("/")} className="text-lg h-14 px-8">Start a Test Prep Session</Button>
@@ -429,8 +422,8 @@ export default function TestPrepPage() {
       <footer className="border-t border-border py-8 px-4">
         <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="flex items-center space-x-2">
-            <img src={suLogo} alt="University of Wisconsin" className="h-10 w-auto" />
-            <span className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} University of Wisconsin · AI Tutor Program</span>
+            <img src={ndLogo} alt="University of Notre Dame" className="h-10 w-auto" />
+            <span className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} University of Notre Dame · AI Tutor Program</span>
           </div>
           <div className="flex space-x-6">
             <a onClick={() => setLocation("/terms")} className="hover:text-primary cursor-pointer transition-colors text-sm text-muted-foreground">Terms</a>

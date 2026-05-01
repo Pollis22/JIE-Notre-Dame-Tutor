@@ -1,5 +1,5 @@
 /**
- * University of Wisconsin AI Tutor Platform
+ * Notre Dame AI Tutor Platform
  * Copyright (c) 2025 JIE Mastery AI, Inc.
  * All Rights Reserved.
  * 
@@ -94,7 +94,7 @@ export class EmailService {
       await resend.emails.send({
         from: fromEmail,
         to: user.email,
-        subject: 'Welcome to University of Wisconsin AI Tutor!',
+        subject: 'Welcome to Notre Dame AI Tutor!',
         html: `
           <h1>Welcome, ${user.parentName}!</h1>
           <p>Thank you for creating an account for ${user.studentName}.</p>
@@ -105,7 +105,7 @@ export class EmailService {
             <li>Upload study materials (optional)</li>
             <li>Connect with your AI tutor and start learning</li>
           </ul>
-          <a href="${this.getBaseUrl()}/pricing" style="display:inline-block;padding:12px 24px;background:#dc2626;color:white;text-decoration:none;border-radius:6px;">View Plans</a>
+          <a href="${this.getBaseUrl()}/pricing" style="display:inline-block;padding:12px 24px;background:#0C2340;color:white;text-decoration:none;border-radius:6px;">View Plans</a>
           <p style="margin-top:24px;color:#666;font-size:14px;">
             If you no longer wish to receive updates, <a href="${this.getBaseUrl()}/unsubscribe?email=${user.email}">unsubscribe here</a>.
           </p>
@@ -141,8 +141,8 @@ export class EmailService {
             <li><strong>Subjects:</strong> Math, English, Science, Spanish and More</li>
           </ul>
           <p>Start your first tutoring session now:</p>
-          <a href="${this.getBaseUrl()}/tutor" style="display:inline-block;padding:12px 24px;background:#dc2626;color:white;text-decoration:none;border-radius:6px;">Go to Dashboard</a>
-          <p style="margin-top:30px;padding:20px;background:#fef2f2;border-radius:8px;text-align:center;color:#C41E3A;font-size:18px;font-weight:600;">
+          <a href="${this.getBaseUrl()}/tutor" style="display:inline-block;padding:12px 24px;background:#0C2340;color:white;text-decoration:none;border-radius:6px;">Go to Dashboard</a>
+          <p style="margin-top:30px;padding:20px;background:#FFFBEF;border-radius:8px;text-align:center;color:#C41E3A;font-size:18px;font-weight:600;">
             Thank you, we appreciate your business!
           </p>
           <p style="margin-top:24px;">Questions? Reply to this email anytime.</p>
@@ -173,8 +173,8 @@ export class EmailService {
           <h1>Minutes Added!</h1>
           <p>Hi ${user.parentName},</p>
           <p>We've added ${user.minutesPurchased} minutes to your account.</p>
-          <a href="${this.getBaseUrl()}/tutor" style="display:inline-block;padding:12px 24px;background:#dc2626;color:white;text-decoration:none;border-radius:6px;">Continue Learning</a>
-          <p style="margin-top:30px;padding:20px;background:#fef2f2;border-radius:8px;text-align:center;color:#C41E3A;font-size:18px;font-weight:600;">
+          <a href="${this.getBaseUrl()}/tutor" style="display:inline-block;padding:12px 24px;background:#0C2340;color:white;text-decoration:none;border-radius:6px;">Continue Learning</a>
+          <p style="margin-top:30px;padding:20px;background:#FFFBEF;border-radius:8px;text-align:center;color:#C41E3A;font-size:18px;font-weight:600;">
             Thank you, we appreciate your business!
           </p>
           <p style="margin-top:24px;color:#666;font-size:14px;">
@@ -201,7 +201,7 @@ export class EmailService {
     try {
       const resend = getResendClient();
       const fromEmail = getFromEmail();
-      const adminEmail = process.env.ADMIN_EMAIL || 'support@stateuniversity-tutor.ai';
+      const adminEmail = process.env.ADMIN_EMAIL || 'support@notredame-tutor.jiemastery.ai';
       
       // Format amount as currency (treat 0 as valid, only N/A for undefined/null)
       const formattedAmount = typeof data.amount === 'number' ? `$${data.amount.toFixed(2)}` : 'N/A';
@@ -209,12 +209,12 @@ export class EmailService {
       // Build professional HTML email
       const html = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <div style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); padding: 20px; border-radius: 8px 8px 0 0;">
+          <div style="background: linear-gradient(135deg, #0C2340 0%, #0a1a30 100%); padding: 20px; border-radius: 8px 8px 0 0;">
             <h1 style="color: white; margin: 0; font-size: 24px;">🔔 ${type}</h1>
           </div>
           
           <div style="background: #f9fafb; padding: 24px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 8px 8px;">
-            <h2 style="color: #111827; margin-top: 0; border-bottom: 2px solid #dc2626; padding-bottom: 8px;">
+            <h2 style="color: #111827; margin-top: 0; border-bottom: 2px solid #0C2340; padding-bottom: 8px;">
               Customer Details
             </h2>
             
@@ -222,7 +222,7 @@ export class EmailService {
               <tr style="border-bottom: 1px solid #e5e7eb;">
                 <td style="padding: 12px 0; color: #6b7280; font-weight: 500; width: 140px;">Email:</td>
                 <td style="padding: 12px 0; color: #111827;">
-                  <a href="mailto:${data.email || 'N/A'}" style="color: #dc2626; text-decoration: none;">${data.email || 'N/A'}</a>
+                  <a href="mailto:${data.email || 'N/A'}" style="color: #0C2340; text-decoration: none;">${data.email || 'N/A'}</a>
                 </td>
               </tr>
               <tr style="border-bottom: 1px solid #e5e7eb;">
@@ -245,13 +245,13 @@ export class EmailService {
               <tr style="border-bottom: 1px solid #e5e7eb;">
                 <td style="padding: 12px 0; color: #6b7280; font-weight: 500;">Phone:</td>
                 <td style="padding: 12px 0; color: #111827;">
-                  <a href="tel:${data.phone}" style="color: #dc2626; text-decoration: none;">${data.phone}</a>
+                  <a href="tel:${data.phone}" style="color: #0C2340; text-decoration: none;">${data.phone}</a>
                 </td>
               </tr>
               ` : ''}
             </table>
             
-            <h2 style="color: #111827; border-bottom: 2px solid #dc2626; padding-bottom: 8px;">
+            <h2 style="color: #111827; border-bottom: 2px solid #0C2340; padding-bottom: 8px;">
               Subscription Details
             </h2>
             
@@ -285,7 +285,7 @@ export class EmailService {
           </div>
           
           <p style="text-align: center; color: #9ca3af; font-size: 12px; margin-top: 16px;">
-            University of Wisconsin AI Tutor - Admin Notification System
+            Notre Dame AI Tutor — Admin Notification System
           </p>
         </div>
       `;
@@ -313,7 +313,7 @@ export class EmailService {
     try {
       const resend = getResendClient();
       const fromEmail = getFromEmail();
-      const adminEmail = process.env.ADMIN_EMAIL || 'support@stateuniversity-tutor.ai';
+      const adminEmail = process.env.ADMIN_EMAIL || 'support@notredame-tutor.jiemastery.ai';
       
       const { customerEmail, customerName, planName, amountPaid, invoiceNumber, invoiceUrl, renewalDate } = params;
       
@@ -345,7 +345,7 @@ export class EmailService {
                   <!-- Header with Logo and Branding -->
                   <tr>
                     <td style="background: linear-gradient(135deg, #C41E3A 0%, #8B0000 100%); padding: 30px; text-align: center;">
-                      <img src="${logoUrl}" alt="University of Wisconsin AI Tutor" width="150" style="max-width: 150px; height: auto;">
+                      <img src="${logoUrl}" alt="Notre Dame AI Tutor" width="150" style="max-width: 150px; height: auto;">
                       <h1 style="color: #ffffff; margin: 20px 0 0; font-size: 28px; font-weight: 600;">
                         Subscription Renewed!
                       </h1>
@@ -437,7 +437,7 @@ export class EmailService {
                   <tr>
                     <td style="background-color: #1a1a1a; padding: 25px; text-align: center;">
                       <p style="margin: 0; color: #ffffff; font-size: 14px; font-weight: 600;">
-                        University of Wisconsin AI Tutor
+                        Notre Dame AI Tutor
                       </p>
                       <p style="margin: 10px 0 0; color: #999; font-size: 12px;">
                         Admin Notification - ${new Date().getFullYear()}
@@ -454,7 +454,7 @@ export class EmailService {
       `;
       
       const text = `
-UNIVERSITY OF WISCONSIN AI TUTOR - SUBSCRIPTION RENEWED
+UNIVERSITY OF NOTRE DAME AI TUTOR - SUBSCRIPTION RENEWED
 
 Recurring Revenue: +$${amountPaid.toFixed(2)}
 Plan: ${planName}
@@ -510,11 +510,11 @@ Customer minutes have been reset for the new billing cycle.
           <style>
             body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f8fafc; }
             .container { max-width: 600px; margin: 0 auto; background: white; }
-            .header { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white; padding: 40px 20px; text-align: center; }
+            .header { background: linear-gradient(135deg, #0C2340 0%, #0a1a30 100%); color: white; padding: 40px 20px; text-align: center; }
             .header h1 { margin: 0; font-size: 28px; }
             .content { padding: 40px 30px; background: #ffffff; }
-            .verify-box { background: #fef2f2; border: 2px solid #dc2626; padding: 30px; border-radius: 12px; margin: 30px 0; text-align: center; }
-            .verify-button { display: inline-block; background: #dc2626; color: white !important; padding: 18px 40px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; }
+            .verify-box { background: #FFFBEF; border: 2px solid #0C2340; padding: 30px; border-radius: 12px; margin: 30px 0; text-align: center; }
+            .verify-button { display: inline-block; background: #0C2340; color: white !important; padding: 18px 40px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; }
             .feature-list { background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0; }
             .feature-list li { margin: 8px 0; }
             .link-fallback { background: #f8fafc; padding: 15px; border-radius: 8px; margin: 20px 0; word-break: break-all; font-size: 12px; color: #666; }
@@ -531,7 +531,7 @@ Customer minutes have been reset for the new billing cycle.
             <div class="content">
               <p>Hi ${user.name}!</p>
               
-              <p>Thank you for signing up for University of Wisconsin AI Tutor! Your payment has been processed successfully.</p>
+              <p>Thank you for signing up for Notre Dame AI Tutor! Your payment has been processed successfully.</p>
               
               <p><strong>Please verify your email address</strong> to activate your account and start using the AI tutor.</p>
               
@@ -556,13 +556,13 @@ Customer minutes have been reset for the new billing cycle.
                 ${verificationUrl}
               </div>
               
-              <p>If you didn't create an account with University of Wisconsin AI Tutor, you can safely ignore this email.</p>
+              <p>If you didn't create an account with Notre Dame AI Tutor, you can safely ignore this email.</p>
               
-              <p>Welcome to the family!<br><strong>The University of Wisconsin AI Tutor Team</strong></p>
+              <p>Welcome to the Notre Dame family. <strong>Go Irish!</strong><br><strong>The Notre Dame AI Tutor Team</strong></p>
             </div>
             
             <div class="footer">
-              <p><strong>University of Wisconsin AI Tutor</strong> | Patent Pending System</p>
+              <p><strong>Notre Dame AI Tutor</strong> | Patent Pending System</p>
               <p>Questions? Reply to this email for support.</p>
             </div>
           </div>
@@ -572,7 +572,7 @@ Customer minutes have been reset for the new billing cycle.
       
       const text = `Hi ${user.name}!
 
-Thank you for signing up for University of Wisconsin AI Tutor! Your payment has been processed successfully.
+Thank you for signing up for Notre Dame AI Tutor! Your payment has been processed successfully.
 
 Please verify your email address to activate your account:
 
@@ -582,13 +582,13 @@ Once verified, you'll have immediate access to voice tutoring, study materials, 
 
 If you didn't create an account, you can ignore this email.
 
-Welcome to the family!
-The University of Wisconsin AI Tutor Team`;
+Welcome to the Notre Dame family. Go Irish!
+The Notre Dame AI Tutor Team`;
       
       await resend.emails.send({
         from: fromEmail,
         to: user.email,
-        subject: '✓ Verify Your Email - University of Wisconsin AI Tutor',
+        subject: '✓ Verify Your Email — Notre Dame AI Tutor',
         html,
         text
       });
@@ -628,11 +628,11 @@ The University of Wisconsin AI Tutor Team`;
           <style>
             body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f8fafc; }
             .container { max-width: 600px; margin: 0 auto; background: white; }
-            .header { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white; padding: 40px 20px; text-align: center; }
+            .header { background: linear-gradient(135deg, #0C2340 0%, #0a1a30 100%); color: white; padding: 40px 20px; text-align: center; }
             .header h1 { margin: 0; font-size: 28px; }
             .content { padding: 40px 30px; background: #ffffff; }
-            .cta-box { background: #fef2f2; border: 2px solid #dc2626; padding: 30px; border-radius: 12px; margin: 30px 0; text-align: center; }
-            .cta-button { display: inline-block; background: #dc2626; color: white !important; padding: 18px 40px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; }
+            .cta-box { background: #FFFBEF; border: 2px solid #0C2340; padding: 30px; border-radius: 12px; margin: 30px 0; text-align: center; }
+            .cta-button { display: inline-block; background: #0C2340; color: white !important; padding: 18px 40px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; }
             .feature-list { background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0; }
             .feature-list li { margin: 8px 0; }
             .footer { background: #f8fafc; padding: 30px; text-align: center; color: #666; font-size: 14px; }
@@ -648,7 +648,7 @@ The University of Wisconsin AI Tutor Team`;
             <div class="content">
               <p>Hi ${params.name}!</p>
               
-              <p>You signed up for University of Wisconsin AI Tutor but haven't started your free trial yet. Your <strong>30 minutes of free AI tutoring</strong> is ready and waiting!</p>
+              <p>You signed up for Notre Dame AI Tutor but haven't started your free trial yet. Your <strong>30 minutes of free AI tutoring</strong> is ready and waiting!</p>
               
               <div class="cta-box">
                 <a href="${ctaUrl}" class="cta-button">
@@ -666,13 +666,13 @@ The University of Wisconsin AI Tutor Team`;
                 </ul>
               </div>
               
-              <p style="color: #666; font-size: 14px;">If you didn't sign up for University of Wisconsin AI Tutor, you can safely ignore this email.</p>
+              <p style="color: #666; font-size: 14px;">If you didn't sign up for Notre Dame AI Tutor, you can safely ignore this email.</p>
               
-              <p>We'd love to help you learn!<br><strong>The University of Wisconsin AI Tutor Team</strong></p>
+              <p>We'd love to help you learn!<br><strong>The Notre Dame AI Tutor Team</strong></p>
             </div>
             
             <div class="footer">
-              <p><strong>University of Wisconsin AI Tutor</strong> | Patent Pending System</p>
+              <p><strong>Notre Dame AI Tutor</strong> | Patent Pending System</p>
               <p>Questions? Reply to this email for support.</p>
             </div>
           </div>
@@ -682,7 +682,7 @@ The University of Wisconsin AI Tutor Team`;
       
       const text = `Hi ${params.name}!
 
-You signed up for University of Wisconsin AI Tutor but haven't started your free trial yet. Your 30 minutes of free AI tutoring is ready and waiting!
+You signed up for Notre Dame AI Tutor but haven't started your free trial yet. Your 30 minutes of free AI tutoring is ready and waiting!
 
 ${ctaText}: ${ctaUrl}
 
@@ -694,12 +694,12 @@ Here's what you'll get:
 
 If you didn't sign up, you can ignore this email.
 
-The University of Wisconsin AI Tutor Team`;
+The Notre Dame AI Tutor Team`;
       
       await resend.emails.send({
         from: fromEmail,
         to: params.email,
-        subject: 'Your University of Wisconsin AI Tutor free trial is waiting',
+        subject: 'Your Notre Dame AI Tutor free trial is waiting',
         html,
         text
       });
@@ -728,21 +728,21 @@ The University of Wisconsin AI Tutor Team`;
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-<h1 style="color: #dc2626;">Reset Your Password</h1>
+<h1 style="color: #0C2340;">Reset Your Password</h1>
 <p>Hi ${user.name},</p>
 <p>We received a request to reset your password. Click the button below to create a new password:</p>
 <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 30px auto;">
 <tr>
-<td style="border-radius: 6px; background-color: #dc2626;">
-<a href="${resetUrl}" target="_blank" style="background-color: #dc2626; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block; font-family: Arial, sans-serif;">Reset Password</a>
+<td style="border-radius: 6px; background-color: #0C2340;">
+<a href="${resetUrl}" target="_blank" style="background-color: #0C2340; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block; font-family: Arial, sans-serif;">Reset Password</a>
 </td>
 </tr>
 </table>
 <p>Or copy and paste this link into your browser:</p>
-<p style="word-break: break-all; color: #666; font-size: 14px;"><a href="${resetUrl}" target="_blank" style="color: #dc2626;">${resetUrl}</a></p>
+<p style="word-break: break-all; color: #666; font-size: 14px;"><a href="${resetUrl}" target="_blank" style="color: #0C2340;">${resetUrl}</a></p>
 <p style="color: #666; font-size: 14px; margin-top: 30px;">This password reset link will expire in 1 hour. If you didn't request a password reset, you can safely ignore this email.</p>
 <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
-<p style="color: #999; font-size: 12px;">University of Wisconsin AI Tutor<br><a href="https://stateuniversity-tutor.ai" target="_blank" style="color: #dc2626;">stateuniversity-tutor.ai</a></p>
+<p style="color: #999; font-size: 12px;">Notre Dame AI Tutor<br><a href="https://notredame-tutor.jiemastery.ai" target="_blank" style="color: #0C2340;">notredame-tutor.jiemastery.ai</a></p>
 </body>
 </html>`;
 
@@ -757,14 +757,14 @@ ${resetUrl}
 
 This password reset link will expire in 1 hour. If you didn't request a password reset, you can safely ignore this email.
 
-University of Wisconsin AI Tutor
-stateuniversity-tutor.ai
+Notre Dame AI Tutor
+notredame-tutor.jiemastery.ai
       `;
 
       await resend.emails.send({
         from: fromEmail,
         to: user.email,
-        subject: 'Reset Your Password - University of Wisconsin AI Tutor',
+        subject: 'Reset Your Password — Notre Dame AI Tutor',
         html,
         text
       });
@@ -784,7 +784,7 @@ stateuniversity-tutor.ai
     try {
       const resend = getResendClient();
       const fromEmail = getFromEmail();
-      const adminEmail = process.env.ADMIN_EMAIL || 'support@stateuniversity-tutor.ai';
+      const adminEmail = process.env.ADMIN_EMAIL || 'support@notredame-tutor.jiemastery.ai';
       
       // Send to admin
       await resend.emails.send({
@@ -807,7 +807,7 @@ stateuniversity-tutor.ai
       await resend.emails.send({
         from: fromEmail,
         to: contact.email,
-        subject: 'We Received Your Message - University of Wisconsin AI Tutor',
+        subject: 'We Received Your Message — Notre Dame AI Tutor',
         html: `
           <h1>Thank You for Contacting Us</h1>
           <p>Hi ${contact.name},</p>
@@ -817,7 +817,7 @@ stateuniversity-tutor.ai
           <hr>
           <p style="white-space: pre-wrap;">${contact.message}</p>
           <hr>
-          <p>Best regards,<br>University of Wisconsin AI Tutor Team</p>
+          <p>Best regards,<br>Notre Dame AI Tutor Team</p>
           <p style="margin-top:24px;color:#666;font-size:14px;">
             <a href="${process.env.REPLIT_DEV_DOMAIN || 'http://localhost:5000'}/unsubscribe?email=${contact.email}">Unsubscribe from marketing emails</a>
           </p>
@@ -836,7 +836,7 @@ stateuniversity-tutor.ai
   // ==========================================
 
   private getAdminEmail(): string {
-    return process.env.ADMIN_EMAIL || 'support@stateuniversity-tutor.ai';
+    return process.env.ADMIN_EMAIL || 'support@notredame-tutor.jiemastery.ai';
   }
 
   // Customer Cancellation Email
@@ -864,7 +864,7 @@ stateuniversity-tutor.ai
             .access-box { background: #f0f9ff; border: 2px solid #0ea5e9; padding: 25px; border-radius: 8px; margin: 25px 0; text-align: center; }
             .access-date { font-size: 24px; font-weight: bold; color: #0369a1; }
             .features-list { background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0; }
-            .cta-button { display: inline-block; background: #dc2626; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; }
+            .cta-button { display: inline-block; background: #0C2340; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; }
             .footer { background: #f8fafc; padding: 30px; text-align: center; color: #666; }
           </style>
         </head>
@@ -906,13 +906,13 @@ stateuniversity-tutor.ai
               
               <p style="color: #666;">We'd love to know why you're leaving so we can improve. Just reply to this email with any feedback - it really helps!</p>
               
-              <p>Thank you for being part of University of Wisconsin AI Tutor. We hope to see you again!</p>
+              <p>Thank you for being part of Notre Dame AI Tutor. We hope to see you again!</p>
               
-              <p>Warmly,<br>The University of Wisconsin AI Tutor Team</p>
+              <p>Warmly,<br>The Notre Dame AI Tutor Team</p>
             </div>
             
             <div class="footer">
-              <p><strong>University of Wisconsin AI Tutor</strong></p>
+              <p><strong>Notre Dame AI Tutor</strong></p>
               <p>Questions? Reply to this email.</p>
             </div>
           </div>
@@ -923,7 +923,7 @@ stateuniversity-tutor.ai
       await resend.emails.send({
         from: fromEmail,
         to: email,
-        subject: 'Your University of Wisconsin AI Tutor Subscription Has Been Canceled',
+        subject: 'Your Notre Dame AI Tutor Subscription Has Been Canceled',
         html,
         text: `Hi ${firstName},\n\nYour ${planName} subscription has been canceled.\n\nYour access continues until: ${accessEndDate}\n\nReactivate anytime: ${this.getBaseUrl()}/dashboard?tab=subscription`
       });
@@ -959,10 +959,10 @@ stateuniversity-tutor.ai
           <style>
             body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; }
             .container { max-width: 600px; margin: 0 auto; }
-            .header { background: #dc2626; color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
+            .header { background: #0C2340; color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
             .content { background: #f8fafc; padding: 30px; border-radius: 0 0 8px 8px; }
             .revenue-box { background: #fee2e2; padding: 20px; border-radius: 8px; text-align: center; margin: 20px 0; }
-            .revenue-box .amount { font-size: 24px; font-weight: bold; color: #dc2626; }
+            .revenue-box .amount { font-size: 24px; font-weight: bold; color: #0C2340; }
             .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
             .info-card { background: white; padding: 15px; border-radius: 8px; }
             .info-card .label { font-size: 12px; color: #666; text-transform: uppercase; }
@@ -1024,7 +1024,7 @@ stateuniversity-tutor.ai
               </div>
               
               <p style="margin-top: 20px;">
-                <a href="mailto:${userEmail}" style="color: #dc2626;">📧 Email this customer</a>
+                <a href="mailto:${userEmail}" style="color: #0C2340;">📧 Email this customer</a>
               </p>
             </div>
           </div>
@@ -1136,11 +1136,11 @@ stateuniversity-tutor.ai
                 </p>
               </div>
               
-              <p style="margin-top: 20px;">The University of Wisconsin AI Tutor Team</p>
+              <p style="margin-top: 20px;">The Notre Dame AI Tutor Team</p>
             </div>
             
             <div class="footer">
-              <p><strong>University of Wisconsin AI Tutor</strong></p>
+              <p><strong>Notre Dame AI Tutor</strong></p>
             </div>
           </div>
         </body>
@@ -1323,11 +1323,11 @@ stateuniversity-tutor.ai
               </div>
               
               <p style="margin-top: 20px;">Questions? Just reply to this email.</p>
-              <p>The University of Wisconsin AI Tutor Team</p>
+              <p>The Notre Dame AI Tutor Team</p>
             </div>
             
             <div class="footer">
-              <p><strong>University of Wisconsin AI Tutor</strong></p>
+              <p><strong>Notre Dame AI Tutor</strong></p>
             </div>
           </div>
         </body>
@@ -1518,11 +1518,11 @@ stateuniversity-tutor.ai
                 </p>
               </div>
               
-              <p style="margin-top: 20px;">The University of Wisconsin AI Tutor Team</p>
+              <p style="margin-top: 20px;">The Notre Dame AI Tutor Team</p>
             </div>
             
             <div class="footer">
-              <p><strong>University of Wisconsin AI Tutor</strong></p>
+              <p><strong>Notre Dame AI Tutor</strong></p>
             </div>
           </div>
         </body>
@@ -1692,11 +1692,11 @@ stateuniversity-tutor.ai
               
               <p>We're excited to have you back! If you have any questions, just reply to this email.</p>
               
-              <p>Happy learning!<br><strong>The University of Wisconsin AI Tutor Team</strong></p>
+              <p>Happy learning!<br><strong>The Notre Dame AI Tutor Team</strong></p>
             </div>
             
             <div class="footer">
-              <p><strong>University of Wisconsin AI Tutor</strong></p>
+              <p><strong>Notre Dame AI Tutor</strong></p>
             </div>
           </div>
         </body>
@@ -1706,7 +1706,7 @@ stateuniversity-tutor.ai
       await resend.emails.send({
         from: fromEmail,
         to: email,
-        subject: `🎉 Welcome Back to University of Wisconsin AI Tutor!`,
+        subject: `🎉 Welcome Back to Notre Dame AI Tutor!`,
         html,
         text: `Welcome back, ${firstName}!\n\nYour ${planName} subscription is now active with ${minutes} minutes per month.\n\nStart learning: ${this.getBaseUrl()}/tutor`
       });
@@ -1844,7 +1844,7 @@ stateuniversity-tutor.ai
       });
       
       await resend.emails.send({
-        from: `University of Wisconsin AI Tutor <${fromEmail}>`,
+        from: `Notre Dame AI Tutor <${fromEmail}>`,
         to: data.parentEmail,
         subject: `${data.studentName}'s Tutoring Session Summary - ${data.subject}`,
         html: `
@@ -1918,7 +1918,7 @@ stateuniversity-tutor.ai
               </div>
               
               <div class="footer">
-                <p style="margin: 0;">University of Wisconsin AI Tutor</p>
+                <p style="margin: 0;">Notre Dame AI Tutor</p>
                 <p style="margin: 8px 0 0;">You're receiving this because ${data.studentName} completed a tutoring session.</p>
                 <p style="margin: 8px 0 0;"><a href="${this.getBaseUrl()}/settings" style="color: #6b7280;">Manage email preferences</a></p>
               </div>
@@ -1945,7 +1945,7 @@ Keep up the great work!
 View full transcript: ${this.getBaseUrl()}/dashboard
 
 --
-University of Wisconsin AI Tutor`
+Notre Dame AI Tutor`
       });
       
       console.log('[EmailService] ✅ Session summary email sent to:', data.parentEmail);
@@ -2179,7 +2179,7 @@ Summary for parent:`
             </div>
 
             <div class="footer">
-              <p>University of Wisconsin AI Tutor</p>
+              <p>Notre Dame AI Tutor</p>
               <p>You received this because your family had tutoring sessions ${timePeriod}.</p>
               <p><a href="${this.getBaseUrl()}/dashboard/preferences" style="color: #6b7280;">Manage email preferences</a></p>
             </div>
@@ -2358,9 +2358,9 @@ Summary for parent:`
             </div>
 
             <div class="footer">
-              <p>University of Wisconsin AI Tutor &bull; Personalized Learning for Every Student</p>
+              <p>Notre Dame AI Tutor &bull; Personalized Learning for Every Student</p>
               <p style="font-size:10px; color:#9ca3af; margin-top:8px;">
-                This report is auto-generated by University of Wisconsin AI Tutor and has not been reviewed by a licensed educator, 
+                This report is auto-generated by Notre Dame AI Tutor and has not been reviewed by a licensed educator, 
                 psychologist, or medical professional. Performance metrics reflect in-session interactions only and 
                 should not be interpreted as formal academic assessments. For concerns about your child's learning 
                 or development, consult a qualified professional.
@@ -2375,7 +2375,7 @@ Summary for parent:`
       `;
 
       await resend.emails.send({
-        from: `University of Wisconsin AI Tutor <${fromEmail}>`,
+        from: `Notre Dame AI Tutor <${fromEmail}>`,
         to: data.parentEmail,
         subject: `${data.studentName}'s Session Report - ${data.subject} - ${formattedDate}`,
         html

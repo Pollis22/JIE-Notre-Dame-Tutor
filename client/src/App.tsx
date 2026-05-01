@@ -1,5 +1,5 @@
 /**
- * University of Wisconsin AI Tutor
+ * University of Notre Dame AI Tutor
  * Powered by JIE Mastery AI, Inc.
  */
 

@@ -1,5 +1,5 @@
 /**
- * Student Notification Settings (UW AI Tutor)
+ * Student Notification Settings (Notre Dame AI Tutor)
  * -----------------------------------------------
  * A page where a student opts in parents, advisors, or their own email to receive
  * digest emails of upcoming coursework. OFF by default — no recipient is added
@@ -164,7 +164,7 @@ export default function StudentNotificationSettings() {
 
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
-            <Bell className="w-6 h-6" style={{ color: "#C5050C" }} />
+            <Bell className="w-6 h-6" style={{ color: "#0C2340" }} />
             <h1 className="text-3xl font-bold">Notifications</h1>
           </div>
           <p className="text-muted-foreground">

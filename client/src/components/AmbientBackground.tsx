@@ -69,7 +69,7 @@ export function AmbientBackground() {
         if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
       });
 
-      // Connections — crimson tint
+      // Connections — Notre Dame Blue tint
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const a = nodes[i], b = nodes[j];
@@ -83,7 +83,7 @@ export function AmbientBackground() {
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = `rgba(197, 5, 12, ${alpha})`;
+            ctx.strokeStyle = `rgba(12, 35, 64, ${alpha})`;
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }
@@ -104,19 +104,19 @@ export function AmbientBackground() {
         const alpha = n.opacity * Math.max(0, Math.min(1, fade));
 
         if (n.isCampus) {
-          // Campus phrase — slightly larger, italic, crimson
+          // Campus phrase — slightly larger, italic, Notre Dame Blue
           const fontSize = n.symbol === 'W' ? 18 : 11;
           ctx.font = `italic bold ${fontSize}px Georgia, serif`;
-          ctx.fillStyle = `rgba(197, 5, 12, ${alpha * 0.85})`;
+          ctx.fillStyle = `rgba(12, 35, 64, ${alpha * 0.85})`;
           ctx.fillText(n.symbol!, n.x, n.y);
         } else if (n.symbol) {
           ctx.font = `${10 + n.r * 2}px serif`;
-          ctx.fillStyle = `rgba(197, 5, 12, ${alpha * 0.75})`;
+          ctx.fillStyle = `rgba(12, 35, 64, ${alpha * 0.75})`;
           ctx.fillText(n.symbol, n.x, n.y);
         } else {
           ctx.beginPath();
           ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(197, 5, 12, ${alpha})`;
+          ctx.fillStyle = `rgba(12, 35, 64, ${alpha})`;
           ctx.fill();
         }
       });

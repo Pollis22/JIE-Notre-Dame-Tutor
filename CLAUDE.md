@@ -1,7 +1,7 @@
 # CLAUDE.md — JIE-UW-Tutor
 
 ## Project Overview
-JIE-UW-Tutor is the University of Wisconsin–Madison white-label deployment of JIE Mastery. College/Adult learners only — no K-12 grade bands. Same voice pipeline as JIE Mastery: AssemblyAI STT → Claude LLM → ElevenLabs TTS. Includes Student Relationship Management (SRM) system with syllabus parsing, academic calendar, study tasks, and engagement scoring.
+JIE-UW-Tutor is the University of Notre Dame white-label deployment of JIE Mastery. College/Adult learners only — no K-12 grade bands. Same voice pipeline as JIE Mastery: AssemblyAI STT → Claude LLM → ElevenLabs TTS. Includes Student Relationship Management (SRM) system with syllabus parsing, academic calendar, study tasks, and engagement scoring.
 
 ## Branch & Deployment Rules (CRITICAL)
 
@@ -19,7 +19,7 @@ JIE-UW-Tutor is the University of Wisconsin–Madison white-label deployment of 
 - **Frontend**: React 18, TypeScript, TanStack Query, shadcn/ui, Wouter routing, Vite
 - **Backend**: Express.js, TypeScript, PostgreSQL via Drizzle ORM
 - **Voice**: AssemblyAI STT, Claude LLM, ElevenLabs TTS, Silero VAD (self-hosted WASM in `client/public/onnx/`)
-- **Auth**: Access-code-only (no Stripe payments — UW provides access codes)
+- **Auth**: Access-code-only (no Stripe payments — Notre Dame provides access codes)
 - **Email**: Resend
 
 ## Key File Structure
@@ -61,7 +61,7 @@ app.use("/api/admin/path", requireAdmin, routeName);
 - AssemblyAI formatted duplicates must NOT cancel continuation timers
 
 ### UW-Specific Rules
-- **ALL branding must say "UW AI Tutor"** — never "JIE Mastery" in user-facing content
+- **ALL branding must say "Notre Dame AI Tutor"** — never "JIE Mastery" in user-facing content
 - **Grade level is LOCKED to College/Adult** — no K-12 grade bands, no grade selector dropdown
 - `tutor-page.tsx` forces `setLevel('college')` regardless of student profile
 - `StudentProfilePanel.tsx` Grade Level input is disabled, shows "College/Adult" only

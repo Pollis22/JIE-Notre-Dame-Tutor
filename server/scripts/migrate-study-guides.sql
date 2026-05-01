@@ -1,6 +1,6 @@
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 -- Study Guide Library — Table Creation + Seed Data
--- Run via Beekeeper Studio on dev first, then prod and UW
+-- Run via Beekeeper Studio on dev first, then prod and Notre Dame
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 -- 1. Create the study_guides table

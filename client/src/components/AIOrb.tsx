@@ -13,7 +13,7 @@ interface AIOrbProps {
 const PALETTES = {
   '6-8':    { core: '#06b6d4', mid: '#3b82f6', glow: 'rgba(6,182,212,0.6)',  ring: '#22d3ee' },
   '9-12':   { core: '#8b5cf6', mid: '#a855f7', glow: 'rgba(139,92,246,0.6)', ring: '#c084fc' },
-  'College':{ core: '#C5050C', mid: '#e8150f', glow: 'rgba(197,5,12,0.55)',  ring: '#ff6b6b' },
+  'College':{ core: '#0C2340', mid: '#C99700', glow: 'rgba(12, 35, 64,0.55)',  ring: '#E8B84A' },
 };
 
 export function AIOrb({ state, size = 100, ageGroup = 'College' }: AIOrbProps) {

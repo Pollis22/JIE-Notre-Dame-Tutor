@@ -69,7 +69,7 @@ export function FeedbackWidget() {
             <MessageSquarePlus className="w-4 h-4 text-primary" />
           </div>
           <span className="text-sm font-semibold text-foreground">Share Your Feedback</span>
-          <span className="hidden sm:inline text-xs text-muted-foreground font-normal">— Help us improve your University of Wisconsin Tutor</span>
+          <span className="hidden sm:inline text-xs text-muted-foreground font-normal">— Help us improve your Notre Dame AI Tutor</span>
         </div>
         <div className="flex items-center gap-2">
           {!isOpen && (
@@ -96,7 +96,7 @@ export function FeedbackWidget() {
               </div>
               <div>
                 <p className="font-semibold text-foreground text-sm">Thank you for your feedback!</p>
-                <p className="text-xs text-muted-foreground mt-1">Your input helps us improve the University of Wisconsin Tutor experience.</p>
+                <p className="text-xs text-muted-foreground mt-1">Your input helps us improve the Notre Dame AI Tutor experience.</p>
               </div>
             </div>
           ) : (
@@ -194,7 +194,7 @@ export function FeedbackWidget() {
               {/* Submit */}
               <div className="flex items-center justify-between">
                 <p className="text-xs text-muted-foreground">
-                  Sent privately to the University of Wisconsin AI Tutor team
+                  Sent privately to the University of Notre Dame AI Tutor team
                 </p>
                 <button
                   onClick={handleSubmit}

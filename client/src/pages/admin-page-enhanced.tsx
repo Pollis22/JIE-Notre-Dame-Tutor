@@ -630,7 +630,7 @@ export default function AdminPageEnhanced() {
                           formatter={(value: number) => [value.toLocaleString(), 'Views']}
                           labelFormatter={(label) => `Month: ${label}`}
                         />
-                        <Bar dataKey="views" fill="#dc2626" radius={[4, 4, 0, 0]} />
+                        <Bar dataKey="views" fill="#0C2340" radius={[4, 4, 0, 0]} />
                       </BarChart>
                     </ResponsiveContainer>
                     

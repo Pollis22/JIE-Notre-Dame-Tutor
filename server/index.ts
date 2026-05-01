@@ -1,5 +1,5 @@
 /**
- * University of Wisconsin AI Tutor Platform
+ * University of Notre Dame AI Tutor Platform
  * Copyright (c) 2025 JIE Mastery AI, Inc.
  * All Rights Reserved.
  * 
@@ -67,15 +67,15 @@ const app = express();
 app.set('trust proxy', 1);
 
 // Production: Canonical hostname redirect (apex → www) for session cookie consistency
-// Ensures all users are on www.stateuniversity-tutor.ai so host-only cookies work correctly
+// Ensures all users are on www.notredame-tutor.jiemastery.ai so host-only cookies work correctly
 // Railway domain is NOT redirected - it must continue to work for health checks
 if (process.env.NODE_ENV === 'production') {
   app.use((req, res, next) => {
     const host = (req.headers.host || '').toLowerCase().split(':')[0]; // Normalize and remove port
     // Only redirect apex to www, don't touch Railway domain
-    if (host === 'stateuniversity-tutor.ai') {
-      const redirectUrl = `https://www.stateuniversity-tutor.ai${req.originalUrl}`;
-      console.log(`[Redirect] Canonical redirect: ${host} → www.stateuniversity-tutor.ai${req.originalUrl}`);
+    if (host === 'notredame-tutor.jiemastery.ai') {
+      const redirectUrl = `https://www.notredame-tutor.jiemastery.ai${req.originalUrl}`;
+      console.log(`[Redirect] Canonical redirect: ${host} → www.notredame-tutor.jiemastery.ai${req.originalUrl}`);
       return res.redirect(301, redirectUrl);
     }
     next();

@@ -6,12 +6,12 @@ import {
   Lightbulb, LineChart, MessageCircle, UserCheck, Zap, Database
 } from "lucide-react";
 
-const CARDINAL = "#C5050C";
-const DARK = "#282728";
-const MUTED = "#646569";
+const CARDINAL = "#0C2340";
+const DARK = "#0C2340";
+const MUTED = "#C99700";
 const BORDER = "#E8E8E8";
-const CARDINAL_SOFT = "rgba(197,5,12,0.06)";
-const CARDINAL_BORDER = "rgba(197,5,12,0.20)";
+const CARDINAL_SOFT = "rgba(12, 35, 64,0.06)";
+const CARDINAL_BORDER = "rgba(12, 35, 64,0.20)";
 
 const FONT_DISPLAY = "'Red Hat Display', sans-serif";
 const FONT_BODY = "'Red Hat Text', 'Source Sans 3', sans-serif";
@@ -173,7 +173,7 @@ export default function AboutLSISPage() {
           </SectionIntro>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 20 }}>
-            <Card style={{ background: "#FDF5F5", borderColor: "rgba(197,5,12,0.15)" }}>
+            <Card style={{ background: "#FFFBEF", borderColor: "rgba(12, 35, 64,0.15)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
                 <XCircle style={{ width: 22, height: 22, color: CARDINAL }} />
                 <h3 style={{ fontFamily: FONT_DISPLAY, fontSize: 17, fontWeight: 700, color: DARK }}>
@@ -525,7 +525,7 @@ export default function AboutLSISPage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: 8,
-                    boxShadow: "0 4px 14px rgba(197,5,12,0.25)",
+                    boxShadow: "0 4px 14px rgba(12, 35, 64,0.25)",
                   }}
                 >
                   Start a Session <ArrowRight style={{ width: 16, height: 16 }} />

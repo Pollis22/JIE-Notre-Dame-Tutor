@@ -98,24 +98,24 @@ router.post('/api/feedback', async (req: any, res) => {
     try {
       const { emailService } = await import('../services/email-service');
       await emailService.sendEmail({
-        to: 'pollis@stateuniversity-tutor.ai',
-        subject: `[Feedback] ${categoryLabels[category]} — University of Wisconsin AI Tutor`,
+        to: 'pollis@notredame-tutor.jiemastery.ai',
+        subject: `[Feedback] ${categoryLabels[category]} — University of Notre Dame AI Tutor`,
         html: `<div style="font-family:sans-serif;max-width:600px;margin:0 auto;">
-          <div style="background:#C5050C;padding:20px 24px;border-radius:12px 12px 0 0;">
-            <h1 style="color:white;margin:0;font-size:18px;">📬 University of Wisconsin Tutor Feedback</h1>
+          <div style="background:#0C2340;padding:20px 24px;border-radius:12px 12px 0 0;">
+            <h1 style="color:white;margin:0;font-size:18px;">📬 Notre Dame AI Tutor Feedback</h1>
             <p style="color:rgba(255,255,255,0.8);margin:4px 0 0;font-size:12px;">${now}</p>
           </div>
           <div style="background:#fff;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 12px 12px;padding:20px 24px;">
             <p><b>Category:</b> ${categoryLabels[category]}</p>
             <p><b>Rating:</b> ${ratingDisplay}</p>
             <p><b>From:</b> ${userInfo}</p>
-            <div style="background:#f9fafb;border-left:4px solid #C5050C;padding:14px 16px;border-radius:0 8px 8px 0;margin-top:12px;">
+            <div style="background:#f9fafb;border-left:4px solid #0C2340;padding:14px 16px;border-radius:0 8px 8px 0;margin-top:12px;">
               <p style="margin:0;font-size:14px;line-height:1.6;white-space:pre-wrap;">${message.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</p>
             </div>
-            <p style="margin:16px 0 0;font-size:11px;color:#9ca3af;text-align:center;">University of Wisconsin AI Tutor • Feedback Widget</p>
+            <p style="margin:16px 0 0;font-size:11px;color:#9ca3af;text-align:center;">University of Notre Dame AI Tutor • Feedback Widget</p>
           </div>
         </div>`,
-        text: `UNIVERSITY OF WISCONSIN TUTOR FEEDBACK\nCategory: ${categoryLabels[category]}\nRating: ${ratingDisplay}\n${userInfo}\nTime: ${now}\n\nMessage:\n${message}`,
+        text: `UNIVERSITY OF NOTRE DAME TUTOR FEEDBACK\nCategory: ${categoryLabels[category]}\nRating: ${ratingDisplay}\n${userInfo}\nTime: ${now}\n\nMessage:\n${message}`,
       });
     } catch (emailErr: any) {
       console.error('[Feedback Widget] Email failed:', emailErr.message);

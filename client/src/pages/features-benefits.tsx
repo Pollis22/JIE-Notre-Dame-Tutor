@@ -21,14 +21,14 @@ export default function FeaturesAndBenefits() {
       {/* Global Navigation */}
       <NavigationHeader />
 
-      {/* Hero Section with Bascom Hall */}
+      {/* Hero Section with the Main Building */}
       <div className="relative h-[500px] overflow-hidden">
         <img 
-          src="/bascom-hall.png" 
-          alt="University of Wisconsin campus" 
+          src="/golden-dome.png" 
+          alt="University of Notre Dame campus" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#C5050C]/80 via-[#C5050C]/60 to-[#C5050C]/90 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0C2340]/80 via-[#0C2340]/60 to-[#0C2340]/90 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <h1 className="text-5xl md:text-6xl font-bold mb-4" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
               Your 24/7 AI Study Partner
@@ -38,7 +38,7 @@ export default function FeaturesAndBenefits() {
             </p>
             <button
               onClick={() => setLocation("/auth")}
-              className="bg-white text-[#C5050C] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-[#0C2340] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Started
             </button>
@@ -51,53 +51,53 @@ export default function FeaturesAndBenefits() {
         
         {/* Key Benefits Grid */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-[#C5050C] text-center mb-12" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
+          <h2 className="text-4xl font-bold text-[#0C2340] text-center mb-12" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
             Why Students Choose Our Platform
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#C5050C]">
-              <Clock className="w-12 h-12 text-[#C5050C] mb-4" />
+            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#0C2340]">
+              <Clock className="w-12 h-12 text-[#0C2340] mb-4" />
               <h3 className="text-xl font-bold mb-2">Available 24/7</h3>
               <p className="text-gray-700">
                 No more scheduling conflicts or waiting for office hours. Get help whenever you need it, day or night.
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#C5050C]">
-              <Globe className="w-12 h-12 text-[#C5050C] mb-4" />
+            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#0C2340]">
+              <Globe className="w-12 h-12 text-[#0C2340] mb-4" />
               <h3 className="text-xl font-bold mb-2">25 Languages</h3>
               <p className="text-gray-700">
                 Study in your preferred language with full support for voice and text in 25 languages worldwide.
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#C5050C]">
-              <Zap className="w-12 h-12 text-[#C5050C] mb-4" />
+            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#0C2340]">
+              <Zap className="w-12 h-12 text-[#0C2340] mb-4" />
               <h3 className="text-xl font-bold mb-2">Instant Responses</h3>
               <p className="text-gray-700">
                 No waiting in queues. Get immediate, personalized help that adapts to your learning style.
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#C5050C]">
-              <Users className="w-12 h-12 text-[#C5050C] mb-4" />
+            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#0C2340]">
+              <Users className="w-12 h-12 text-[#0C2340] mb-4" />
               <h3 className="text-xl font-bold mb-2">Travels With You</h3>
               <p className="text-gray-700">
                 Study from your dorm, library, home, or on the go. Access from any device with an internet connection.
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#C5050C]">
-              <TrendingUp className="w-12 h-12 text-[#C5050C] mb-4" />
+            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#0C2340]">
+              <TrendingUp className="w-12 h-12 text-[#0C2340] mb-4" />
               <h3 className="text-xl font-bold mb-2">Unlimited Sessions</h3>
               <p className="text-gray-700">
                 No hourly limits or session caps. Study for as long as you need to truly master the material.
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#C5050C]">
-              <Award className="w-12 h-12 text-[#C5050C] mb-4" />
+            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#0C2340]">
+              <Award className="w-12 h-12 text-[#0C2340] mb-4" />
               <h3 className="text-xl font-bold mb-2">All Subjects</h3>
               <p className="text-gray-700">
                 From freshman courses to post-grad prep (GRE, LSAT, MCAT), we've got you covered across every discipline.
@@ -108,7 +108,7 @@ export default function FeaturesAndBenefits() {
 
         {/* Powerful Features Section */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-[#C5050C] text-center mb-12" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
+          <h2 className="text-4xl font-bold text-[#0C2340] text-center mb-12" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
             Powerful Features That Work the Way You Learn
           </h2>
 
@@ -116,7 +116,7 @@ export default function FeaturesAndBenefits() {
             {/* Voice-First Learning */}
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/3 flex justify-center">
-                <MessageSquare className="w-32 h-32 text-[#C5050C]" />
+                <MessageSquare className="w-32 h-32 text-[#0C2340]" />
               </div>
               <div className="md:w-2/3">
                 <h3 className="text-2xl font-bold mb-4">Voice-First Learning</h3>
@@ -135,7 +135,7 @@ export default function FeaturesAndBenefits() {
             {/* Document Upload */}
             <div className="flex flex-col md:flex-row-reverse items-center gap-8">
               <div className="md:w-1/3 flex justify-center">
-                <Upload className="w-32 h-32 text-[#C5050C]" />
+                <Upload className="w-32 h-32 text-[#0C2340]" />
               </div>
               <div className="md:w-2/3">
                 <h3 className="text-2xl font-bold mb-4">Upload Any Document</h3>
@@ -154,7 +154,7 @@ export default function FeaturesAndBenefits() {
             {/* Photo Recognition */}
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/3 flex justify-center">
-                <Camera className="w-32 h-32 text-[#C5050C]" />
+                <Camera className="w-32 h-32 text-[#0C2340]" />
               </div>
               <div className="md:w-2/3">
                 <h3 className="text-2xl font-bold mb-4">Snap & Solve</h3>
@@ -173,7 +173,7 @@ export default function FeaturesAndBenefits() {
             {/* Post-Grad Prep */}
             <div id="test-prep" className="flex flex-col md:flex-row-reverse items-center gap-8 scroll-mt-20">
               <div className="md:w-1/3 flex justify-center">
-                <BookOpen className="w-32 h-32 text-[#C5050C]" />
+                <BookOpen className="w-32 h-32 text-[#0C2340]" />
               </div>
               <div className="md:w-2/3">
                 <h3 className="text-2xl font-bold mb-4">Post-Graduate Test Prep</h3>
@@ -193,7 +193,7 @@ export default function FeaturesAndBenefits() {
 
         {/* Mobile & Desktop */}
         <div className="bg-gray-50 rounded-lg p-8 mb-20">
-          <h2 className="text-3xl font-bold text-[#C5050C] text-center mb-6" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
+          <h2 className="text-3xl font-bold text-[#0C2340] text-center mb-6" style={{ fontFamily: 'Red Hat Display, sans-serif' }}>
             Study On Any Device
           </h2>
           <p className="text-gray-700 text-lg text-center mb-6">
@@ -209,12 +209,12 @@ export default function FeaturesAndBenefits() {
           <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Learning?</h2>
           <button
             onClick={() => setLocation("/auth")}
-            className="bg-[#C5050C] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#A00409] transition-colors"
+            className="bg-[#0C2340] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#A00409] transition-colors"
           >
             Start Learning Now
           </button>
           <p className="text-gray-600 mt-4">
-            Questions? <button onClick={() => setLocation("/contact")} className="text-[#C5050C] hover:underline">Contact Us</button>
+            Questions? <button onClick={() => setLocation("/contact")} className="text-[#0C2340] hover:underline">Contact Us</button>
           </p>
         </div>
       </div>

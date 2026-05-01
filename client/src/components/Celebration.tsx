@@ -25,7 +25,7 @@ const configs: Record<CelebrationIntensity, confetti.Options> = {
   },
 };
 
-const colors = ['#FF6B6B', '#4ECDC4', '#FFE66D', '#6C5CE7', '#00B894', '#FD79A8'];
+const colors = ['#E8B84A', '#4ECDC4', '#FFE66D', '#6C5CE7', '#00B894', '#FD79A8'];
 
 export function triggerCelebration(intensity: CelebrationIntensity = 'medium') {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

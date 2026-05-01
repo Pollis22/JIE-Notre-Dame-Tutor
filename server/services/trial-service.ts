@@ -937,25 +937,25 @@ export class TrialService {
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;border-radius:8px;max-width:600px;">
 <tr>
 <td style="padding:40px;">
-<h1 style="margin:0 0 20px 0;color:#dc2626;font-size:28px;font-weight:bold;font-family:Arial,Helvetica,sans-serif;">Start Your Free Trial!</h1>
-<p style="margin:0 0 30px 0;color:#333333;font-size:16px;line-height:24px;font-family:Arial,Helvetica,sans-serif;">Thank you for your interest in University of Wisconsin AI Tutor. Click the button below to verify your email and start your 5-minute free trial.</p>
+<h1 style="margin:0 0 20px 0;color:#0C2340;font-size:28px;font-weight:bold;font-family:Arial,Helvetica,sans-serif;">Start Your Free Trial!</h1>
+<p style="margin:0 0 30px 0;color:#333333;font-size:16px;line-height:24px;font-family:Arial,Helvetica,sans-serif;">Thank you for your interest in University of Notre Dame AI Tutor. Click the button below to verify your email and start your 5-minute free trial.</p>
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 30px 0;">
 <tr>
 <td align="center">
 <!--[if mso]>
-<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="${verifyUrl}" style="height:48px;v-text-anchor:middle;width:220px;" arcsize="10%" strokecolor="#dc2626" fillcolor="#dc2626">
+<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="${verifyUrl}" style="height:48px;v-text-anchor:middle;width:220px;" arcsize="10%" strokecolor="#0C2340" fillcolor="#0C2340">
 <w:anchorlock/>
 <center style="color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;">Start My Free Trial</center>
 </v:roundrect>
 <![endif]-->
 <!--[if !mso]><!-->
-<a href="${verifyUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 28px;font-size:16px;font-weight:bold;color:#ffffff;text-decoration:none;background-color:#dc2626;border-radius:6px;font-family:Arial,Helvetica,sans-serif;">Start My Free Trial</a>
+<a href="${verifyUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 28px;font-size:16px;font-weight:bold;color:#ffffff;text-decoration:none;background-color:#0C2340;border-radius:6px;font-family:Arial,Helvetica,sans-serif;">Start My Free Trial</a>
 <!--<![endif]-->
 </td>
 </tr>
 </table>
 <p style="margin:0 0 10px 0;color:#666666;font-size:14px;font-family:Arial,Helvetica,sans-serif;">If the button doesn't work, copy and paste this link into your browser:</p>
-<p style="margin:0 0 20px 0;color:#666666;font-size:14px;word-break:break-all;font-family:Arial,Helvetica,sans-serif;"><a href="${verifyUrl}" style="color:#dc2626;text-decoration:underline;">${verifyUrl}</a></p>
+<p style="margin:0 0 20px 0;color:#666666;font-size:14px;word-break:break-all;font-family:Arial,Helvetica,sans-serif;"><a href="${verifyUrl}" style="color:#0C2340;text-decoration:underline;">${verifyUrl}</a></p>
 <p style="margin:0 0 10px 0;color:#666666;font-size:14px;font-family:Arial,Helvetica,sans-serif;">This link expires in 7 days.</p>
 <p style="margin:0;color:#666666;font-size:14px;font-family:Arial,Helvetica,sans-serif;">If you didn't request this, you can safely ignore this email.</p>
 </td>
@@ -969,7 +969,7 @@ export class TrialService {
 
     const textContent = `Start Your Free Trial!
 
-Thank you for your interest in University of Wisconsin AI Tutor.
+Thank you for your interest in University of Notre Dame AI Tutor.
 
 Click the link below to verify your email and start your 5-minute free trial:
 
@@ -981,7 +981,7 @@ If you didn't request this, you can safely ignore this email.`;
 
     await this.emailService.sendEmail({
       to: email,
-      subject: 'Verify your email for University of Wisconsin AI Tutor Free Trial',
+      subject: 'Verify your email for University of Notre Dame AI Tutor Free Trial',
       html: htmlContent,
       text: textContent,
     });
@@ -1023,7 +1023,7 @@ If you didn't request this, you can safely ignore this email.`;
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;border-radius:8px;max-width:600px;">
 <tr>
 <td style="padding:30px;">
-<h2 style="margin:0 0 20px 0;color:#dc2626;font-size:22px;">New University of Wisconsin AI Tutor Free Trial Started</h2>
+<h2 style="margin:0 0 20px 0;color:#0C2340;font-size:22px;">New University of Notre Dame AI Tutor Free Trial Started</h2>
 <table role="presentation" cellpadding="8" cellspacing="0" border="0" style="margin-bottom:20px;width:100%;">
 <tr>
 <td style="color:#666;font-size:14px;width:120px;"><strong>Email:</strong></td>
@@ -1043,7 +1043,7 @@ If you didn't request this, you can safely ignore this email.`;
 </tr>
 </table>
 <p style="margin:20px 0 0 0;">
-<a href="${adminPanelLink}" style="display:inline-block;padding:10px 20px;font-size:14px;color:#ffffff;text-decoration:none;background-color:#dc2626;border-radius:4px;">View in Admin Panel</a>
+<a href="${adminPanelLink}" style="display:inline-block;padding:10px 20px;font-size:14px;color:#ffffff;text-decoration:none;background-color:#0C2340;border-radius:4px;">View in Admin Panel</a>
 </p>
 </td>
 </tr>
@@ -1054,7 +1054,7 @@ If you didn't request this, you can safely ignore this email.`;
 </body>
 </html>`;
 
-    const textContent = `New University of Wisconsin AI Tutor Free Trial Started
+    const textContent = `New University of Notre Dame AI Tutor Free Trial Started
 
 Email: ${email}
 Status: ${status.charAt(0).toUpperCase() + status.slice(1)}
@@ -1065,7 +1065,7 @@ View in Admin Panel: ${adminPanelLink}`;
 
     await this.emailService.sendEmail({
       to: adminEmail,
-      subject: 'New University of Wisconsin AI Tutor Free Trial Started',
+      subject: 'New University of Notre Dame AI Tutor Free Trial Started',
       html: htmlContent,
       text: textContent,
     });
@@ -1280,7 +1280,7 @@ View in Admin Panel: ${adminPanelLink}`;
       // Check if trial is exhausted
       if (!entitlement.hasAccess) {
         console.log('[TrialService] requestMagicLink: trial exhausted, reason:', entitlement.reason);
-        return { ok: false, code: 'TRIAL_EXHAUSTED', error: 'Your trial has ended. Please sign up to continue using University of Wisconsin AI Tutor.' };
+        return { ok: false, code: 'TRIAL_EXHAUSTED', error: 'Your trial has ended. Please sign up to continue using University of Notre Dame AI Tutor.' };
       }
 
       // INSTANT RESUME: Trial is verified AND active - return instant resume (NO magic link email)
@@ -1467,7 +1467,7 @@ View in Admin Panel: ${adminPanelLink}`;
 <tr>
 <td style="padding:40px;">
 <h1 style="margin:0 0 20px 0;color:#16a34a;font-size:28px;font-weight:bold;">Your Trial Has Been Extended!</h1>
-<p style="margin:0 0 20px 0;color:#333333;font-size:16px;line-height:24px;">Great news! We've added <strong>${extensionMinutes} more minutes</strong> to your University of Wisconsin AI Tutor trial.</p>
+<p style="margin:0 0 20px 0;color:#333333;font-size:16px;line-height:24px;">Great news! We've added <strong>${extensionMinutes} more minutes</strong> to your University of Notre Dame AI Tutor trial.</p>
 <p style="margin:0 0 30px 0;color:#333333;font-size:16px;line-height:24px;">Continue your learning journey right where you left off.</p>
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 30px 0;">
 <tr>
@@ -1476,7 +1476,7 @@ View in Admin Panel: ${adminPanelLink}`;
 </td>
 </tr>
 </table>
-<p style="margin:0;color:#666666;font-size:14px;">Ready to unlock unlimited learning? <a href="${baseUrl}/pricing" style="color:#dc2626;text-decoration:underline;">View our plans</a></p>
+<p style="margin:0;color:#666666;font-size:14px;">Ready to unlock unlimited learning? <a href="${baseUrl}/pricing" style="color:#0C2340;text-decoration:underline;">View our plans</a></p>
 </td>
 </tr>
 </table>
@@ -1488,7 +1488,7 @@ View in Admin Panel: ${adminPanelLink}`;
 
     const textContent = `Your Trial Has Been Extended!
 
-Great news! We've added ${extensionMinutes} more minutes to your University of Wisconsin AI Tutor trial.
+Great news! We've added ${extensionMinutes} more minutes to your University of Notre Dame AI Tutor trial.
 
 Continue your learning journey: ${resumeUrl}
 
@@ -1498,7 +1498,7 @@ Ready to unlock unlimited learning? View our plans: ${baseUrl}/pricing`;
       const emailService = new EmailService();
       await emailService.sendEmail({
         to: email,
-        subject: 'Your University of Wisconsin AI Tutor Trial Has Been Extended!',
+        subject: 'Your Notre Dame AI Tutor Trial Has Been Extended!',
         html: htmlContent,
         text: textContent,
       });
@@ -1635,25 +1635,25 @@ Ready to unlock unlimited learning? View our plans: ${baseUrl}/pricing`;
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;border-radius:8px;max-width:600px;">
 <tr>
 <td style="padding:40px;">
-<h1 style="margin:0 0 20px 0;color:#dc2626;font-size:28px;font-weight:bold;font-family:Arial,Helvetica,sans-serif;">Continue Your Free Trial</h1>
-<p style="margin:0 0 30px 0;color:#333333;font-size:16px;line-height:24px;font-family:Arial,Helvetica,sans-serif;">Click the button below to sign in and continue your University of Wisconsin AI Tutor free trial.</p>
+<h1 style="margin:0 0 20px 0;color:#0C2340;font-size:28px;font-weight:bold;font-family:Arial,Helvetica,sans-serif;">Continue Your Free Trial</h1>
+<p style="margin:0 0 30px 0;color:#333333;font-size:16px;line-height:24px;font-family:Arial,Helvetica,sans-serif;">Click the button below to sign in and continue your University of Notre Dame AI Tutor free trial.</p>
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 30px 0;">
 <tr>
 <td align="center">
 <!--[if mso]>
-<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="${magicUrl}" style="height:48px;v-text-anchor:middle;width:220px;" arcsize="10%" strokecolor="#dc2626" fillcolor="#dc2626">
+<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="${magicUrl}" style="height:48px;v-text-anchor:middle;width:220px;" arcsize="10%" strokecolor="#0C2340" fillcolor="#0C2340">
 <w:anchorlock/>
 <center style="color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;">Continue My Trial</center>
 </v:roundrect>
 <![endif]-->
 <!--[if !mso]><!-->
-<a href="${magicUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 28px;font-size:16px;font-weight:bold;color:#ffffff;text-decoration:none;background-color:#dc2626;border-radius:6px;font-family:Arial,Helvetica,sans-serif;">Continue My Trial</a>
+<a href="${magicUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 28px;font-size:16px;font-weight:bold;color:#ffffff;text-decoration:none;background-color:#0C2340;border-radius:6px;font-family:Arial,Helvetica,sans-serif;">Continue My Trial</a>
 <!--<![endif]-->
 </td>
 </tr>
 </table>
 <p style="margin:0 0 10px 0;color:#666666;font-size:14px;font-family:Arial,Helvetica,sans-serif;">If the button doesn't work, copy and paste this link into your browser:</p>
-<p style="margin:0 0 20px 0;color:#666666;font-size:14px;word-break:break-all;font-family:Arial,Helvetica,sans-serif;"><a href="${magicUrl}" style="color:#dc2626;text-decoration:underline;">${magicUrl}</a></p>
+<p style="margin:0 0 20px 0;color:#666666;font-size:14px;word-break:break-all;font-family:Arial,Helvetica,sans-serif;"><a href="${magicUrl}" style="color:#0C2340;text-decoration:underline;">${magicUrl}</a></p>
 <p style="margin:0 0 10px 0;color:#666666;font-size:14px;font-family:Arial,Helvetica,sans-serif;">This link expires in ${MAGIC_TOKEN_EXPIRY_MINUTES} minutes and can only be used once.</p>
 <p style="margin:0;color:#666666;font-size:14px;font-family:Arial,Helvetica,sans-serif;">If you didn't request this, you can safely ignore this email.</p>
 </td>
@@ -1667,7 +1667,7 @@ Ready to unlock unlimited learning? View our plans: ${baseUrl}/pricing`;
 
     const textContent = `Continue Your Free Trial
 
-Click the link below to sign in and continue your University of Wisconsin AI Tutor free trial:
+Click the link below to sign in and continue your University of Notre Dame AI Tutor free trial:
 
 ${magicUrl}
 
@@ -1677,7 +1677,7 @@ If you didn't request this, you can safely ignore this email.`;
 
     await this.emailService.sendEmail({
       to: email,
-      subject: 'Continue Your University of Wisconsin AI Tutor Free Trial',
+      subject: 'Continue Your Notre Dame AI Tutor Free Trial',
       html: htmlContent,
       text: textContent,
     });
@@ -1858,8 +1858,8 @@ If you didn't request this, you can safely ignore this email.`;
     console.log(`[TrialService] Sending reminder email #${reminderNumber} to: ${email}`);
 
     const subject = reminderNumber === 1 
-      ? 'Reminder: Complete your University of Wisconsin AI Tutor Free Trial signup'
-      : 'Final Reminder: Your University of Wisconsin AI Tutor Free Trial is waiting';
+      ? 'Reminder: Complete your University of Notre Dame AI Tutor Free Trial signup'
+      : 'Final Reminder: Your Notre Dame AI Tutor Free Trial is waiting';
 
     const urgencyText = reminderNumber === 1
       ? 'You started signing up for your free trial but haven\'t verified your email yet.'
@@ -1888,26 +1888,26 @@ If you didn't request this, you can safely ignore this email.`;
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;border-radius:8px;max-width:600px;">
 <tr>
 <td style="padding:40px;">
-<h1 style="margin:0 0 20px 0;color:#dc2626;font-size:28px;font-weight:bold;font-family:Arial,Helvetica,sans-serif;">Complete Your Free Trial</h1>
+<h1 style="margin:0 0 20px 0;color:#0C2340;font-size:28px;font-weight:bold;font-family:Arial,Helvetica,sans-serif;">Complete Your Free Trial</h1>
 <p style="margin:0 0 20px 0;color:#333333;font-size:16px;line-height:24px;font-family:Arial,Helvetica,sans-serif;">${urgencyText}</p>
 <p style="margin:0 0 30px 0;color:#333333;font-size:16px;line-height:24px;font-family:Arial,Helvetica,sans-serif;">Click the button below to verify your email and experience our AI tutor. Your personalized learning session awaits!</p>
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 30px 0;">
 <tr>
 <td align="center">
 <!--[if mso]>
-<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="${verifyUrl}" style="height:48px;v-text-anchor:middle;width:220px;" arcsize="10%" strokecolor="#dc2626" fillcolor="#dc2626">
+<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="${verifyUrl}" style="height:48px;v-text-anchor:middle;width:220px;" arcsize="10%" strokecolor="#0C2340" fillcolor="#0C2340">
 <w:anchorlock/>
 <center style="color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;">Verify & Start Trial</center>
 </v:roundrect>
 <![endif]-->
 <!--[if !mso]><!-->
-<a href="${verifyUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 28px;font-size:16px;font-weight:bold;color:#ffffff;text-decoration:none;background-color:#dc2626;border-radius:6px;font-family:Arial,Helvetica,sans-serif;">Verify & Start Trial</a>
+<a href="${verifyUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 28px;font-size:16px;font-weight:bold;color:#ffffff;text-decoration:none;background-color:#0C2340;border-radius:6px;font-family:Arial,Helvetica,sans-serif;">Verify & Start Trial</a>
 <!--<![endif]-->
 </td>
 </tr>
 </table>
 <p style="margin:0 0 10px 0;color:#666666;font-size:14px;font-family:Arial,Helvetica,sans-serif;">If the button doesn't work, copy and paste this link into your browser:</p>
-<p style="margin:0 0 20px 0;color:#666666;font-size:14px;word-break:break-all;font-family:Arial,Helvetica,sans-serif;"><a href="${verifyUrl}" style="color:#dc2626;text-decoration:underline;">${verifyUrl}</a></p>
+<p style="margin:0 0 20px 0;color:#666666;font-size:14px;word-break:break-all;font-family:Arial,Helvetica,sans-serif;"><a href="${verifyUrl}" style="color:#0C2340;text-decoration:underline;">${verifyUrl}</a></p>
 <p style="margin:0 0 10px 0;color:#666666;font-size:14px;font-family:Arial,Helvetica,sans-serif;">This link expires in 7 days.</p>
 <p style="margin:0 0 10px 0;color:#666666;font-size:14px;font-family:Arial,Helvetica,sans-serif;"><strong>Pro tip:</strong> Check your Spam/Junk folder if you don't see our emails in your inbox.</p>
 <p style="margin:0;color:#666666;font-size:14px;font-family:Arial,Helvetica,sans-serif;">If you no longer wish to receive these reminders, simply ignore this email.</p>

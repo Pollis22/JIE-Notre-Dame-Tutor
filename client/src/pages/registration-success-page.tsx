@@ -104,7 +104,7 @@ export default function RegistrationSuccessPage() {
         <CardHeader>
           <CardTitle className="text-center">
             {status === 'loading' && 'Completing Registration...'}
-            {status === 'success' && 'Welcome to University of Wisconsin AI Tutor!'}
+            {status === 'success' && 'Welcome to Notre Dame AI Tutor!'}
             {status === 'error' && 'Registration Error'}
           </CardTitle>
         </CardHeader>
