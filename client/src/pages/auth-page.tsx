@@ -19,6 +19,7 @@ import goldenDome from "@/assets/campus/golden-dome.png";
 import leprechaunStatue from "@/assets/campus/leprechaun-statue.png";
 import goldenDomeCloseup from "@/assets/campus/golden-dome-closeup.png";
 import irishFans from "@/assets/campus/irish-fans.png";
+import busyStudents from "@/assets/campus/nd-busy-students.png";
 import leprechaunMascot from "@/assets/campus/leprechaun-mascot.png";
 import ndClassroom from "@/assets/campus/nd-classroom.png";
 import touchdownJesus from "@/assets/campus/touchdown-jesus.png";
@@ -705,22 +706,22 @@ export default function AuthPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
-           STUDENT-ATHLETE SECTION — with the Fighting Irish touchdown banner
+           BUSY STUDENTS SECTION — for any student with a packed schedule
            ═══════════════════════════════════════════════════════════════ */}
       <section className="py-12 md:py-20 px-4 md:px-12 max-w-7xl mx-auto" style={{ background: "#FFFFFF" }}>
         <div className="max-w-4xl mx-auto">
           <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid #E8E8E8", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
-            {/* Football banner image — full-height, crop-positioned to show the Fighting Irish's face */}
+            {/* Banner image — Notre Dame students, faculty, and athletes with books in front of the Golden Dome */}
             <div className="relative overflow-hidden" style={{ minHeight: 220, height: "clamp(220px, 32vw, 320px)" }}>
               <img
-                src={irishFans}
-                alt="the Fighting Irish scoring a touchdown at Notre Dame Stadium"
+                src={busyStudents}
+                alt="Notre Dame students, faculty, and athletes carrying books in front of the Golden Dome"
                 className="w-full h-full object-cover"
-                style={{ objectPosition: "center 22%" }}
+                style={{ objectPosition: "center 35%" }}
               />
               <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(12, 35, 64,0) 45%, rgba(12, 35, 64,0.78) 100%)" }} />
               <div className="absolute bottom-4 left-6 right-6">
-                <p className="text-white font-bold" style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: 14, letterSpacing: 1, textTransform: "uppercase" }}>For Student Athletes</p>
+                <p className="text-white font-bold" style={{ fontFamily: "'Red Hat Display', sans-serif", fontSize: 14, letterSpacing: 1, textTransform: "uppercase" }}>For Students with Busy Schedules</p>
               </div>
             </div>
             <div className="p-6 md:p-10" style={{ background: "#FFF7ED" }}>
@@ -728,15 +729,15 @@ export default function AuthPage() {
                 Built for Your Schedule, Not the Other Way Around
               </h3>
               <p style={{ fontSize: 15, color: "#C99700", lineHeight: 1.65, marginBottom: 24 }}>
-                Travel schedules, practice commitments, and game-day recovery make office hours nearly impossible. Your SRM and tutor adapt to your life.
+                Jobs, internships, club commitments, athletics, family responsibilities, and back-to-back classes make office hours nearly impossible. Your SRM and tutor adapt to your life — whenever and wherever you study.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { icon: <Clock className="w-5 h-5" style={{ color: "#0C2340" }} />, title: "Available 24/7", desc: "Study at 11 PM after a road game. Review before a 6 AM flight. No scheduling conflicts." },
-                  { icon: <Mic className="w-5 h-5" style={{ color: "#0C2340" }} />, title: "Travel-Ready", desc: "Voice tutoring on any device. Study by speaking — on the bus, in the hotel, between events." },
-                  { icon: <BookOpen className="w-5 h-5" style={{ color: "#0C2340" }} />, title: "Every Subject, One Tutor", desc: "No scheduling three specialists for Econ, Bio, and Spanish. One tutor covers the full course load." },
-                  { icon: <Brain className="w-5 h-5" style={{ color: "#0C2340" }} />, title: "Remembers Everything", desc: "Missed two weeks for conference play? The tutor knows exactly where you left off and what gaps need filling." },
+                  { icon: <Clock className="w-5 h-5" style={{ color: "#0C2340" }} />, title: "Available 24/7", desc: "Study at 11 PM after a shift. Review at 6 AM before your first class. No scheduling conflicts." },
+                  { icon: <Mic className="w-5 h-5" style={{ color: "#0C2340" }} />, title: "Study Anywhere", desc: "Voice tutoring on any device. Study by speaking — on the bus, in line for coffee, between classes." },
+                  { icon: <BookOpen className="w-5 h-5" style={{ color: "#0C2340" }} />, title: "Every Subject, One Tutor", desc: "No need to find three specialists for Econ, Bio, and Spanish. One tutor covers your full course load." },
+                  { icon: <Brain className="w-5 h-5" style={{ color: "#0C2340" }} />, title: "Remembers Everything", desc: "Missed a week for a flu, a family event, or a heavy work stretch? The tutor knows exactly where you left off and what gaps need filling." },
                 ].map((f, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 rounded-xl" style={{ background: "rgba(255,255,255,0.8)", border: "1px solid rgba(0,0,0,0.06)" }}>
                     <div className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "rgba(12, 35, 64,0.06)" }}>{f.icon}</div>
@@ -752,8 +753,8 @@ export default function AuthPage() {
                 <div className="flex items-start gap-3">
                   <Shield className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: "#0C2340" }} />
                   <div>
-                    <p style={{ fontWeight: 700, fontSize: 14, color: "#0C2340", marginBottom: 2 }}>Eligibility Protection</p>
-                    <p style={{ fontSize: 13, color: "#C99700", lineHeight: 1.5 }}>Early intervention flags alert academic advisors when a student-athlete shows signs of academic difficulty — weeks before midterm grades. Protect your eligibility proactively.</p>
+                    <p style={{ fontWeight: 700, fontSize: 14, color: "#0C2340", marginBottom: 2 }}>Early Intervention</p>
+                    <p style={{ fontSize: 13, color: "#C99700", lineHeight: 1.5 }}>The system flags academic advisors when engagement drops or deadlines are slipping — weeks before midterm grades. You and your support network see trouble coming early enough to fix it.</p>
                   </div>
                 </div>
               </div>
