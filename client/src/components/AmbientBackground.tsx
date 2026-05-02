@@ -13,7 +13,7 @@ interface Node {
 
 // Academic symbols mixed with subtle campus phrases
 const SYMBOLS = ['∑', '∫', 'π', 'Δ', '∞', '≈', '√', 'α', 'β', 'θ', 'λ', '∂', 'φ', '∇', '≡'];
-const CAMPUS_PHRASES = ['Go State', 'Go State', 'SU', 'SU'];
+const CAMPUS_PHRASES = ['Notre Dame', 'Fighting Irish', 'ND', 'ND'];
 
 export function AmbientBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -105,7 +105,7 @@ export function AmbientBackground() {
 
         if (n.isCampus) {
           // Campus phrase — slightly larger, italic, Notre Dame Blue
-          const fontSize = n.symbol === 'W' ? 18 : 11;
+          const fontSize = n.symbol === 'ND' ? 18 : 11;
           ctx.font = `italic bold ${fontSize}px Georgia, serif`;
           ctx.fillStyle = `rgba(12, 35, 64, ${alpha * 0.85})`;
           ctx.fillText(n.symbol!, n.x, n.y);
