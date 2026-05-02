@@ -61,7 +61,7 @@ function PhotoCollage() {
       {/* Hero tile — the Main Building spans full width on its own row */}
       <div className="max-w-5xl mx-auto mb-3 md:mb-4">
         <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.01]"
-          style={{ border: "3px solid white", boxShadow: "0 12px 40px rgba(0,0,0,0.12)", transform: "rotate(-0.5deg)" }}>
+          style={{ border: "3px solid white", boxShadow: "0 12px 40px rgba(0,0,0,0.12)" }}>
           <img src={goldenDome} alt="the Main Building at the University of Notre Dame" className="w-full h-48 md:h-72 object-cover" style={{ objectPosition: "center 40%" }} />
           <div style={{ height: 4, background: "#0C2340" }} />
         </div>
@@ -71,31 +71,31 @@ function PhotoCollage() {
       <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4">
         {/* Golden Dome detail — close-up of the Main Building dome and statue of Mary */}
         <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.03]"
-          style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)", transform: "rotate(2deg)" }}>
+          style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)" }}>
           <img src={goldenDomeCloseup} alt="Close-up detail of the Golden Dome and statue of Mary atop the Main Building" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 35%" }} />
         </div>
 
         {/* Leprechaun statue with graduates */}
         <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.03]"
-          style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)", transform: "rotate(-1.5deg)" }}>
+          style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)" }}>
           <img src={leprechaunStatue} alt="Notre Dame graduates posing with the Fighting Irish leprechaun statue" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 20%" }} />
         </div>
 
         {/* Irish fans on game day */}
         <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.03]"
-          style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)", transform: "rotate(1.5deg)" }}>
+          style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)" }}>
           <img src={irishFans} alt="Notre Dame fans painted with IRISH on game day at Notre Dame Stadium" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 25%" }} />
         </div>
 
         {/* Fighting Irish leprechaun mascot */}
         <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.03]"
-          style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)", transform: "rotate(-1.5deg)" }}>
+          style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)" }}>
           <img src={leprechaunMascot} alt="The Fighting Irish leprechaun mascot" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 25%" }} />
         </div>
 
         {/* Hesburgh Library — Word of Life mural */}
         <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.03] col-span-2 md:col-span-1"
-          style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)", transform: "rotate(-2deg)" }}>
+          style={{ border: "3px solid white", boxShadow: "0 8px 25px rgba(0,0,0,0.1)" }}>
           <img src={touchdownJesus} alt="The Word of Life mural (Touchdown Jesus) on the Hesburgh Library" className="w-full h-36 md:h-44 object-cover" style={{ objectPosition: "center 30%" }} />
         </div>
       </div>
@@ -103,7 +103,7 @@ function PhotoCollage() {
       {/* Floating quote */}
       <div className="max-w-4xl mx-auto mt-6 md:mt-8">
         <div className="mx-auto px-5 py-3.5 rounded-xl shadow-md inline-block"
-          style={{ background: "rgba(255,255,255,0.95)", border: "1px solid rgba(12, 35, 64,0.12)", transform: "rotate(-0.5deg)", borderLeft: "3px solid #0C2340" }}>
+          style={{ background: "rgba(255,255,255,0.95)", border: "1px solid rgba(12, 35, 64,0.12)", borderLeft: "3px solid #0C2340" }}>
           <p style={{ fontFamily: "'Red Hat Text', sans-serif", fontSize: 14, fontStyle: "italic", color: "#0C2340", lineHeight: 1.5, fontWeight: 500 }}>
             "It's not just a tutor — it knows my whole semester. Every deadline, every exam, every gap. Game changer."
           </p>
@@ -394,7 +394,7 @@ export default function AuthPage() {
             <div className="flex justify-center items-center">
               <div className="relative w-full max-w-md">
                 <div className="rounded-2xl overflow-hidden shadow-2xl"
-                  style={{ transform: "rotate(1.5deg)", border: "4px solid white", boxShadow: "0 20px 50px rgba(0,0,0,0.18)" }}>
+                  style={{ border: "4px solid white", boxShadow: "0 20px 50px rgba(0,0,0,0.18)" }}>
                   <img src={ndGraduation} alt="the Fighting Irish celebrating commencement with Notre Dame graduates at the Main Building" className="w-full h-auto" />
                 </div>
               </div>
@@ -475,7 +475,7 @@ export default function AuthPage() {
             <div className="flex justify-center items-center">
               <div className="relative w-full max-w-lg">
                 <div className="rounded-2xl overflow-hidden shadow-2xl"
-                  style={{ transform: "rotate(-1deg)", border: "4px solid white", boxShadow: "0 20px 50px rgba(0,0,0,0.14)" }}>
+                  style={{ border: "4px solid white", boxShadow: "0 20px 50px rgba(0,0,0,0.14)" }}>
                   <img src={hesburghReflection} alt="Notre Dame the Hesburgh Library and campus scenery" className="w-full h-auto" />
                 </div>
               </div>
