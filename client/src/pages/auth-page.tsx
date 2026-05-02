@@ -62,7 +62,7 @@ function PhotoCollage() {
       <div className="max-w-5xl mx-auto mb-3 md:mb-4">
         <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.01]"
           style={{ border: "3px solid white", boxShadow: "0 12px 40px rgba(0,0,0,0.12)" }}>
-          <img src={goldenDome} alt="the Main Building at the University of Notre Dame" className="w-full h-48 md:h-72 object-cover" style={{ objectPosition: "center 40%" }} />
+          <img src={goldenDome} alt="the Main Building at the University of Notre Dame" className="w-full h-64 md:h-[28rem] object-cover" style={{ objectPosition: "center 22%" }} />
           <div style={{ height: 4, background: "#0C2340" }} />
         </div>
       </div>
