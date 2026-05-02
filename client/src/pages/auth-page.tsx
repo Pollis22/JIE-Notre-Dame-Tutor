@@ -715,7 +715,7 @@ export default function AuthPage() {
             <div className="relative overflow-hidden" style={{ minHeight: 220, height: "clamp(220px, 32vw, 320px)" }}>
               <img
                 src={busyStudents}
-                alt="Notre Dame students, faculty, and athletes carrying books in front of the Golden Dome"
+                alt="Notre Dame students, faculty, the Fighting Irish leprechaun mascot, and student-athletes carrying their books on campus"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: "center 35%" }}
               />
